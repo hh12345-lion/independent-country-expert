@@ -1,0 +1,22 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# netlify dev: proxy /api/submit-lead to the function when Next API is unavailable locally
+[[redirects]]
+  from = "/api/submit-lead"
+  to = "/.netlify/functions/submit-lead"
+  status = 200
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
