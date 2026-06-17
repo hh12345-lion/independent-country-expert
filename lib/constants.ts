@@ -2,7 +2,11 @@ export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
   "https://www.independentcountryexpert.com";
 export const SITE_NAME = "Independent Country Expert";
-export const SITE_EMAIL = "info@independentcountryexpert.com";
+export const SITE_EMAIL = "cases@independentcountryexpert.com";
+export const SITE_REGION = "United Kingdom";
+/** Sitewide copy: service is UK tribunals only */
+export const SITE_REGION_NOTICE =
+  "UK immigration & asylum tribunals only — for solicitors and Legal Aid practitioners in England, Wales, Scotland, and Northern Ireland.";
 export const LINKEDIN_URL =
   "https://www.linkedin.com/company/independent-country-expert";
 

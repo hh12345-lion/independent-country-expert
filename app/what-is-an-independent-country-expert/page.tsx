@@ -20,7 +20,7 @@ export default function WhatIsPage() {
       <PageJsonLd breadcrumbs={crumbs} />
       <PageShell
         title="What Is an Independent Country Expert?"
-        subtitle="The tribunal-duty role of country expert witnesses in UK asylum and immigration proceedings."
+        subtitle="The tribunal-duty role of country expert witnesses in UK asylum and immigration proceedings — United Kingdom tribunals only."
         breadcrumbs={crumbs}
       >
         <p className="text-[#374151] leading-relaxed">

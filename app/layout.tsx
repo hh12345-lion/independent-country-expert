@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Header } from "@/components/layout/Header";
+import { UkRegionBar } from "@/components/layout/UkRegionBar";
 import { Footer } from "@/components/layout/Footer";
 import { CookieConsentProvider } from "@/components/cookies";
 import { ConsentDefaultsScript } from "@/components/cookies/ConsentDefaultsScript";
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s | Independent Country Expert",
   },
   description:
-    "Find an independent country expert witness in the UK. Tribunal-duty country condition reports for asylum appeals — CPR Part 35, Practice Direction 2024, state protection, internal relocation, and CPIN challenge. Legal Aid compatible.",
+    "Independent country expert witness reports for UK immigration and asylum tribunals only. Serving UK solicitors and Legal Aid practitioners — CPR Part 35, Practice Direction 2024, state protection, internal relocation, and CPIN challenge.",
   verification: {
     google: process.env.GOOGLE_SITE_VERIFICATION,
     other: process.env.BING_SITE_VERIFICATION
@@ -50,6 +51,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <ConsentDefaultsScript />
         <CookieConsentProvider>
           <Header />
+          <UkRegionBar />
           <div className="flex-1">{children}</div>
           <Footer />
         </CookieConsentProvider>

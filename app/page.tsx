@@ -36,6 +36,11 @@ export default function HomePage() {
             with truly independent country expert witnesses — CPR Part 35 compliant, Practice Direction 2024
             ready, with profile-specific analysis beyond Home Office CPIN summaries.
           </p>
+          <p className="mt-4 max-w-2xl text-sm text-white/70 sm:text-base">
+            We serve the United Kingdom only: First-tier Tribunal and Upper Tribunal asylum and immigration
+            proceedings across England, Wales, Scotland, and Northern Ireland. We do not provide expert
+            evidence services for tribunals or courts outside the UK.
+          </p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
             <Link
               href="/contact"

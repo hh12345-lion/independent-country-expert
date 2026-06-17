@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 export function CTASection({
-  title = "Instruct an Independent Country Expert",
-  description = "Submit your case details for confidential routing to the right jurisdiction-specific expert. Response within one business day. Legal Aid compatible.",
+  title = "Contact Us — UK Tribunals Only",
+  description = "Submit your case details for confidential routing to the right jurisdiction-specific expert. UK immigration and asylum tribunals only. Response within one business day. Legal Aid compatible.",
 }: {
   title?: string;
   description?: string;

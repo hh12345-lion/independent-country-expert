@@ -46,6 +46,9 @@ export function Header() {
           <span className="truncate text-sm sm:text-base lg:text-lg">
             Independent Country Expert
           </span>
+          <span className="shrink-0 rounded-[4px] bg-[#B87333] px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wide text-white sm:px-2 sm:text-[10px]">
+            UK
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Main">
