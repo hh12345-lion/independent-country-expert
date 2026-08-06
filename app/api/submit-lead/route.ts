@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
-import { appendRow, isGoogleSheetsConfigured } from "@/lib/google-sheets";
+import { appendLeadToSheet } from "@/lib/contact-sheet";
+import { isGoogleSheetsConfigured } from "@/lib/google-sheets";
 import {
   buildLeadWebhookPayload,
   getLeadWebhookUrl,
-  LEAD_BRAND_NAME,
   type SubmitLeadPayload,
 } from "@/lib/submit-lead";
 
@@ -11,20 +11,23 @@ function sanitize(str: string): string {
   return str.replace(/<[^>]*>/g, "").trim();
 }
 
+/**
+ * Local / Next.js path for lead submit.
+ * On Netlify production, netlify.toml force-redirects /api/submit-lead
+ * to netlify/functions/submit-lead.js (Lead_notification_setup.md).
+ */
 export async function POST(request: Request) {
   const webhookUrl = getLeadWebhookUrl();
   const sheetsOk = isGoogleSheetsConfigured();
 
-  if (!sheetsOk && !webhookUrl) {
-    const missing: string[] = [];
-    if (!process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL) missing.push("GOOGLE_SERVICE_ACCOUNT_EMAIL");
-    if (!process.env.GOOGLE_PRIVATE_KEY) missing.push("GOOGLE_PRIVATE_KEY");
-    if (!process.env.GOOGLE_SHEET_ID) missing.push("GOOGLE_SHEET_ID");
+  if (!webhookUrl && !sheetsOk) {
     return NextResponse.json(
       {
         error:
-          "Lead storage not configured. Add Google Sheets vars to .env.local and restart the dev server.",
-        ...(process.env.NODE_ENV === "development" && { missing }),
+          "Lead_notification_url is not configured. Set it in .env / Netlify env (see Lead_notification_setup.md).",
+        ...(process.env.NODE_ENV === "development" && {
+          hint: "Also accepts LEAD_NOTIFICATION_URL. Google Sheets vars are an optional secondary store.",
+        }),
       },
       { status: 503 }
     );
@@ -37,9 +40,20 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
   }
 
-  const fullName = sanitize(body.fullName ?? "");
-  const email = (body.email ?? "").toLowerCase().trim();
-  const phone = sanitize(body.phone ?? "");
+  if (
+    typeof body.fullName !== "string" ||
+    typeof body.email !== "string" ||
+    typeof body.phone !== "string"
+  ) {
+    return NextResponse.json(
+      { error: "fullName, email, and phone must be strings" },
+      { status: 400 }
+    );
+  }
+
+  const fullName = sanitize(body.fullName);
+  const email = body.email.toLowerCase().trim();
+  const phone = sanitize(body.phone);
 
   if (!fullName || !email) {
     return NextResponse.json({ error: "fullName and email are required" }, { status: 400 });
@@ -49,32 +63,23 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid email address" }, { status: 400 });
   }
 
-  const row = [
-    new Date().toISOString(),
+  const lead: SubmitLeadPayload = {
     fullName,
-    sanitize(body.organisation ?? ""),
     email,
     phone,
-    sanitize(body.jurisdiction ?? ""),
-    sanitize(body.expertise ?? ""),
-    sanitize(body.caseType ?? ""),
-    sanitize(body.funding ?? ""),
-    body.deadline ?? "",
-    sanitize(body.summary ?? ""),
-    LEAD_BRAND_NAME,
-  ];
+    organisation: sanitize(body.organisation ?? ""),
+    jurisdiction: sanitize(body.jurisdiction ?? ""),
+    expertise: sanitize(body.expertise ?? ""),
+    caseType: sanitize(body.caseType ?? ""),
+    funding: sanitize(body.funding ?? ""),
+    deadline: body.deadline ?? "",
+    summary: sanitize(body.summary ?? ""),
+  };
 
   if (sheetsOk) {
-    try {
-      await appendRow(row);
-    } catch (error) {
-      console.error("Google Sheets write failed:", {
-        message: error instanceof Error ? error.message : "Unknown error",
-        timestamp: new Date().toISOString(),
-      });
-      if (!webhookUrl) {
-        return NextResponse.json({ error: "Failed to save submission" }, { status: 500 });
-      }
+    const sheetWritten = await appendLeadToSheet(lead);
+    if (!sheetWritten && !webhookUrl) {
+      return NextResponse.json({ error: "Failed to save submission" }, { status: 500 });
     }
   }
 
@@ -87,14 +92,17 @@ export async function POST(request: Request) {
         body: JSON.stringify(outbound),
         signal: AbortSignal.timeout(12_000),
       });
-      if (!res.ok && !sheetsOk) {
-        return NextResponse.json({ error: "Lead notification endpoint returned an error" }, { status: 502 });
+      if (!res.ok) {
+        return NextResponse.json(
+          { error: "Lead notification endpoint returned an error" },
+          { status: 502 }
+        );
       }
     } catch {
-      if (!sheetsOk) {
-        return NextResponse.json({ error: "Could not reach lead notification endpoint" }, { status: 502 });
-      }
-      console.error("Lead webhook request failed");
+      return NextResponse.json(
+        { error: "Could not reach lead notification endpoint" },
+        { status: 502 }
+      );
     }
   }
 

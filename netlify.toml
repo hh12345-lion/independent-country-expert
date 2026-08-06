@@ -5,11 +5,16 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-# netlify dev: proxy /api/submit-lead to the function when Next API is unavailable locally
+[functions]
+  directory = "netlify/functions"
+
+# Lead_notification_setup.md — force /api/submit-lead through the Netlify function
+# so production always uses netlify/functions/submit-lead.js
 [[redirects]]
   from = "/api/submit-lead"
   to = "/.netlify/functions/submit-lead"
   status = 200
+  force = true
 
 [[headers]]
   for = "/sitemap.xml"

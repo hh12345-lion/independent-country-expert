@@ -7,7 +7,7 @@ import { SITE_EMAIL, SITE_REGION_NOTICE } from "@/lib/constants";
 export const metadata = createMetadata({
   title: "Instruct an Independent Country Expert UK | Contact",
   description:
-    "Instruct an independent country expert witness for UK asylum tribunals only. Submit case details for routing to the right jurisdiction-specific specialist. Response within one business day.",
+    "Instruct an independent country expert witness for UK asylum tribunals only. Submit a short brief for routing to the right jurisdiction-specific specialist. Response within one business day.",
   path: "/contact",
   noindex: true,
 });
@@ -18,20 +18,16 @@ export default function ContactPage() {
     <>
       <PageJsonLd breadcrumbs={crumbs} />
       <PageShell
-        title="Contact Independent Country Expert (UK)"
-        subtitle="Submit your case details for confidential routing to the right jurisdiction-specific expert — UK tribunals only."
+        title="Instruct an expert"
+        subtitle="Short brief. We reply within one business day with proposed expert, scope, and timeline."
         breadcrumbs={crumbs}
       >
-        <p className="mb-4 text-[#374151] leading-relaxed">
-          {SITE_REGION_NOTICE}
-        </p>
-        <p className="mb-8 text-[#374151] leading-relaxed">
-          Complete the form below and we will respond within one business day with proposed expert, scope, and
-          timeline. For urgent instructions, include your hearing date. You can also email us directly at{" "}
-          <a href={`mailto:${SITE_EMAIL}`} className="font-semibold text-[#B87333] hover:underline">
+        <p className="mb-2 max-w-xl text-sm text-[#33403A]">{SITE_REGION_NOTICE}</p>
+        <p className="mb-10 max-w-xl text-[#33403A] leading-relaxed">
+          Prefer email?{" "}
+          <a href={`mailto:${SITE_EMAIL}`} className="font-medium text-[#2B7A78] hover:underline">
             {SITE_EMAIL}
           </a>
-          .
         </p>
         <ContactForm />
       </PageShell>

@@ -42,34 +42,34 @@ export default function NetworkPage() {
         breadcrumbs={crumbs}
       >
         <HubPageLinks showNetwork={false} />
-        <p className="mb-8 text-[#374151] leading-relaxed">
+        <p className="mb-8 text-[#33403A] leading-relaxed">
           Independent Country Expert coordinates instruction across twelve specialist network sites. Each site
           provides deep jurisdiction-specific content, asylum profiles, and CPIN analysis. This hub routes
           solicitors to the right specialist while maintaining independence standards across the network.
         </p>
 
-        <h2 className="text-xl font-bold text-[#2C3E50]">Network Directory</h2>
+        <h2 className="text-xl font-bold text-[#0F241C]">Network Directory</h2>
         <div className="mt-6">
           <ResponsiveTableWrap label="Swipe to view full network directory">
             <table className="w-full min-w-[560px] border-collapse text-sm">
               <thead>
-                <tr className="border-b border-[#CBD5E1] bg-[#F5F7FA]">
-                  <th className="px-3 py-3 text-left font-semibold text-[#2C3E50] sm:px-4">Site</th>
-                  <th className="px-3 py-3 text-left font-semibold text-[#2C3E50] sm:px-4">Role</th>
-                  <th className="px-3 py-3 text-left font-semibold text-[#2C3E50] sm:px-4">URL</th>
+                <tr className="border-b border-[#B8C4BE] bg-[#E7ECE8]">
+                  <th className="px-3 py-3 text-left font-semibold text-[#0F241C] sm:px-4">Site</th>
+                  <th className="px-3 py-3 text-left font-semibold text-[#0F241C] sm:px-4">Role</th>
+                  <th className="px-3 py-3 text-left font-semibold text-[#0F241C] sm:px-4">URL</th>
                 </tr>
               </thead>
               <tbody>
                 {networkSites.map((site) => (
-                  <tr key={site.url} className="border-b border-[#CBD5E1]">
-                    <td className="px-3 py-3 font-medium text-[#2C3E50] sm:px-4">{site.name}</td>
-                    <td className="px-3 py-3 text-[#374151] sm:px-4">{site.expertise}</td>
+                  <tr key={site.url} className="border-b border-[#B8C4BE]">
+                    <td className="px-3 py-3 font-medium text-[#0F241C] sm:px-4">{site.name}</td>
+                    <td className="px-3 py-3 text-[#33403A] sm:px-4">{site.expertise}</td>
                     <td className="px-3 py-3 sm:px-4">
                       <a
                         href={site.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="break-all font-medium text-[#B87333] hover:underline"
+                        className="break-all font-medium text-[#2B7A78] hover:underline"
                       >
                         {site.url.replace("https://www.", "")}
                       </a>
@@ -85,16 +85,16 @@ export default function NetworkPage() {
           {networkSites.map((site) => (
             <article
               key={site.url}
-              className="rounded-[8px] border border-[#CBD5E1] bg-white p-5 shadow-[0_1px_3px_rgba(0,0,0,0.08)] sm:p-6"
+              className="rounded-[8px] border border-[#B8C4BE] bg-white p-5 shadow-[0_1px_3px_rgba(0,0,0,0.08)] sm:p-6"
             >
-              <h2 className="text-lg font-bold text-[#2C3E50]">{site.name}</h2>
-              <p className="mt-2 text-sm text-[#374151] leading-relaxed">{site.description}</p>
-              <p className="mt-3 text-xs font-medium text-[#B87333]">{site.expertise}</p>
+              <h2 className="text-lg font-bold text-[#0F241C]">{site.name}</h2>
+              <p className="mt-2 text-sm text-[#33403A] leading-relaxed">{site.description}</p>
+              <p className="mt-3 text-xs font-medium text-[#2B7A78]">{site.expertise}</p>
               <a
                 href={site.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-flex min-h-[44px] items-center text-sm font-semibold text-[#B87333] hover:underline"
+                className="mt-4 inline-flex min-h-[44px] items-center text-sm font-semibold text-[#2B7A78] hover:underline"
               >
                 Visit {site.name} →
               </a>

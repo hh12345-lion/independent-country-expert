@@ -62,12 +62,12 @@ export default function HowToInstructPage() {
         <ol className="space-y-8">
           {steps.map((step) => (
             <li key={step.n} className="flex gap-4">
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#2C3E50] text-lg font-bold text-white">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#0F241C] text-lg font-bold text-white">
                 {step.n}
               </span>
               <div>
-                <h2 className="text-lg font-bold text-[#2C3E50]">{step.title}</h2>
-                <p className="mt-2 text-[#374151] leading-relaxed">{step.body}</p>
+                <h2 className="text-lg font-bold text-[#0F241C]">{step.title}</h2>
+                <p className="mt-2 text-[#33403A] leading-relaxed">{step.body}</p>
               </div>
             </li>
           ))}
@@ -82,7 +82,7 @@ export default function HowToInstructPage() {
         />
         <Link
           href="/contact"
-          className="mt-8 inline-flex min-h-[44px] items-center rounded-[8px] bg-[#B87333] px-6 py-3 font-semibold text-white hover:bg-[#9A6129]"
+          className="mt-8 inline-flex min-h-[44px] items-center rounded-[8px] bg-[#2B7A78] px-6 py-3 font-semibold text-white hover:bg-[#236663]"
         >
           Instruct an Expert
         </Link>

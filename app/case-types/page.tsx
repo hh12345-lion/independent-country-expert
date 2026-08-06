@@ -31,7 +31,7 @@ export default function CaseTypesPage() {
             href: `/case-types/${c.slug}`,
           }))}
         />
-        <Link href="/how-to-instruct" className="mt-8 inline-flex min-h-[44px] items-center font-semibold text-[#B87333] hover:underline">
+        <Link href="/how-to-instruct" className="mt-8 inline-flex min-h-[44px] items-center font-semibold text-[#2B7A78] hover:underline">
           How to instruct
         </Link>
       </PageShell>

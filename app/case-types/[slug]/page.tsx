@@ -40,18 +40,18 @@ export default async function CaseTypePage({ params }: { params: Promise<{ slug:
       <PageJsonLd breadcrumbs={crumbs} faqs={ct.faqs} />
       <PageShell title={ct.h1} breadcrumbs={crumbs}>
         {ct.content.map((p, i) => (
-          <p key={i} className="mb-4 text-[#374151] leading-relaxed">
+          <p key={i} className="mb-4 text-[#33403A] leading-relaxed">
             {p}
           </p>
         ))}
         <FAQSection faqs={ct.faqs} />
-        <h3 className="mt-8 font-semibold text-[#2C3E50]">Related expertise areas</h3>
+        <h3 className="mt-8 font-semibold text-[#0F241C]">Related expertise areas</h3>
         <ul className="mt-2 space-y-1">
           {ct.relatedExpertise.map((s) => {
             const area = getExpertiseArea(s);
             return (
               <li key={s}>
-                <Link href={`/expertise-areas/${s}`} className="text-[#B87333] hover:underline">
+                <Link href={`/expertise-areas/${s}`} className="text-[#2B7A78] hover:underline">
                   {area?.title ?? s}
                 </Link>
               </li>

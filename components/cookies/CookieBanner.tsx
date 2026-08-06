@@ -3,10 +3,7 @@
 import Link from "next/link";
 import { useCookieConsent } from "./CookieConsentContext";
 
-/**
- * Fixed bottom consent bar — no document flow shift (zero CLS).
- * Lion Group–aligned premium palette: judicial navy base, burnished bronze accent, gold top edge.
- */
+/** Fixed bottom consent bar — no document flow shift (zero CLS). */
 export function CookieBanner() {
   const { status, acceptAll, rejectNonEssential, openPreferences } = useCookieConsent();
 
@@ -23,43 +20,33 @@ export function CookieBanner() {
           aria-labelledby="cookie-banner-title"
           aria-describedby="cookie-banner-desc"
           aria-modal="false"
-          className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#2C3E50] text-white shadow-[0_-8px_40px_rgba(0,0,0,0.35)] ring-1 ring-white/10 backdrop-blur-md"
+          className="relative overflow-hidden border border-[#B8C4BE] bg-[#0F241C] text-[#E7ECE8] shadow-[0_-8px_40px_rgba(15,36,28,0.35)]"
         >
-          {/* Lion Group signature gold edge */}
-          <div
-            className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#B87333] via-[#D4956A] to-[#B87333]"
-            aria-hidden
-          />
+          <div className="absolute inset-x-0 top-0 h-0.5 bg-[#2B7A78]" aria-hidden />
 
           <div className="p-5 pt-6 sm:p-7 sm:pt-8">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
               <div className="min-w-0 flex-1">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#B87333]">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#4A9B98]">
                   Privacy &amp; cookies
                 </p>
                 <h2
                   id="cookie-banner-title"
-                  className="mt-2 text-lg font-bold leading-snug tracking-tight text-white sm:text-xl"
+                  className="font-display mt-2 text-xl leading-snug tracking-tight text-[#E7ECE8] sm:text-2xl"
                 >
-                  Your privacy, our standard
+                  Your choices on this site
                 </h2>
                 <p
                   id="cookie-banner-desc"
-                  className="mt-2 max-w-2xl text-sm leading-relaxed text-white/85 sm:text-[15px]"
+                  className="mt-2 max-w-2xl text-sm leading-relaxed text-[#B8C4BE] sm:text-[15px]"
                 >
-                  We use cookies to run this site securely, understand how it is used when you allow it,
-                  and — only with your permission — measure marketing performance. You can change your mind
-                  anytime via <strong className="font-medium text-white">Cookie Settings</strong> in the
-                  footer.
+                  Necessary cookies keep the site secure. Analytics and marketing load only if you allow
+                  them. Change your mind anytime via Cookie Settings in the footer.
                 </p>
                 <p className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-white/55">
-                  <span>GDPR · ePrivacy · CCPA-informed controls</span>
-                  <span className="text-white/30" aria-hidden>
-                    |
-                  </span>
                   <Link
                     href="/cookie-policy"
-                    className="font-medium text-[#B87333] underline-offset-2 hover:text-[#D4956A] hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#B87333]"
+                    className="font-medium text-[#4A9B98] underline-offset-2 hover:text-[#E7ECE8] hover:underline"
                   >
                     Cookie Policy
                   </Link>
@@ -68,43 +55,37 @@ export function CookieBanner() {
                   </span>
                   <Link
                     href="/privacy"
-                    className="font-medium text-[#B87333] underline-offset-2 hover:text-[#D4956A] hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#B87333]"
+                    className="font-medium text-[#4A9B98] underline-offset-2 hover:text-[#E7ECE8] hover:underline"
                   >
                     Privacy Policy
                   </Link>
                 </p>
               </div>
 
-              <div className="flex shrink-0 flex-col gap-2 sm:flex-row sm:flex-wrap lg:min-w-[220px] lg:flex-col xl:flex-row">
+              <div className="flex shrink-0 flex-col gap-2 sm:flex-row sm:flex-wrap lg:min-w-[220px] lg:flex-col">
                 <button
                   type="button"
                   onClick={acceptAll}
-                  className="order-1 min-h-[44px] rounded-xl bg-[#B87333] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-[#B87333]/25 transition hover:bg-[#9A6129] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D4956A] motion-reduce:transition-none sm:order-none"
+                  className="order-1 min-h-[44px] bg-[#2B7A78] px-5 py-3 text-[12px] font-semibold uppercase tracking-[0.1em] text-white transition hover:bg-[#4A9B98] sm:order-none"
                 >
-                  Accept All
+                  Accept all
                 </button>
                 <button
                   type="button"
                   onClick={rejectNonEssential}
-                  className="min-h-[44px] rounded-xl border border-white/25 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white motion-reduce:transition-none"
+                  className="min-h-[44px] border border-white/25 px-5 py-3 text-[12px] font-semibold uppercase tracking-[0.1em] text-[#E7ECE8] transition hover:bg-white/10"
                 >
-                  Reject Non-Essential
+                  Necessary only
                 </button>
                 <button
                   type="button"
                   onClick={openPreferences}
-                  className="min-h-[44px] rounded-xl border border-[#B87333]/50 bg-[#B87333]/10 px-5 py-3 text-sm font-semibold text-[#D4956A] transition hover:bg-[#B87333]/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#B87333] motion-reduce:transition-none"
+                  className="min-h-[44px] px-5 py-3 text-[12px] font-semibold uppercase tracking-[0.1em] text-[#4A9B98] transition hover:text-[#E7ECE8]"
                 >
-                  Customize Preferences
+                  Customize
                 </button>
               </div>
             </div>
-
-            <p className="mt-5 border-t border-white/10 pt-4 text-[11px] leading-snug text-white/45">
-              Strictly necessary cookies are always active. Analytics, marketing, and preference cookies
-              load only after you choose to allow them. Non-essential scripts (Google Analytics, GTM, Meta
-              Pixel, LinkedIn Insight Tag, Hotjar) are blocked until consent is granted.
-            </p>
           </div>
         </div>
       </div>

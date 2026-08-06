@@ -1,18 +1,21 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-primary: #2c3e50;
-  --color-primary-hover: #243342;
-  --color-accent: #b87333;
-  --color-accent-hover: #9a6129;
-  --color-accent-light: #d4956a;
-  --color-section-alt: #f5f7fa;
-  --color-border: #cbd5e1;
-  --color-body: #374151;
-  --font-sans: var(--font-inter);
-  --radius-card: 8px;
-  --radius-sm: 4px;
-  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.06);
+  --color-primary: #0f241c;
+  --color-primary-hover: #0a1914;
+  --color-accent: #2b7a78;
+  --color-accent-hover: #236663;
+  --color-accent-light: #4a9b98;
+  --color-section-alt: #e7ece8;
+  --color-border: #b8c4be;
+  --color-body: #33403a;
+  --color-paper: #fafbfa;
+  --color-mist: #e7ece8;
+  --font-sans: var(--font-figtree);
+  --font-display: var(--font-instrument);
+  --radius-card: 2px;
+  --radius-sm: 2px;
+  --shadow-card: 0 1px 0 rgba(15, 36, 28, 0.06);
   --breakpoint-xs: 375px;
 }
 
@@ -21,11 +24,15 @@ html {
 }
 
 body {
-  background: #ffffff;
-  color: #374151;
-  font-family: var(--font-inter), system-ui, sans-serif;
+  background: var(--color-paper);
+  color: var(--color-body);
+  font-family: var(--font-figtree), system-ui, sans-serif;
   overflow-x: hidden;
   min-width: 320px;
+}
+
+.font-display {
+  font-family: var(--font-instrument), Georgia, "Times New Roman", serif;
 }
 
 main,
@@ -38,6 +45,36 @@ video,
 svg {
   max-width: 100%;
   height: auto;
+}
+
+/* Atlas field — contour + meridian atmosphere */
+.atlas-field {
+  background-color: #0f241c;
+  background-image:
+    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(43, 122, 120, 0.22), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 15% 80%, rgba(74, 155, 152, 0.12), transparent 50%),
+    linear-gradient(rgba(232, 236, 230, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232, 236, 230, 0.04) 1px, transparent 1px);
+  background-size: auto, auto, 48px 48px, 48px 48px;
+}
+
+.atlas-panel {
+  background-color: #fafbfa;
+  background-image:
+    linear-gradient(rgba(15, 36, 28, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 36, 28, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.meridian-rule {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-border) 12%,
+    var(--color-border) 88%,
+    transparent
+  );
 }
 
 @keyframes slideUp {
@@ -60,9 +97,70 @@ svg {
   }
 }
 
+@keyframes atlasRise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes meridianDraw {
+  from {
+    stroke-dashoffset: 400;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-atlas-rise {
+  animation: atlasRise 0.7s ease-out both;
+}
+
+.animate-atlas-rise-delay {
+  animation: atlasRise 0.7s ease-out 0.12s both;
+}
+
+.animate-atlas-rise-delay-2 {
+  animation: atlasRise 0.7s ease-out 0.24s both;
+}
+
+.nav-atlas-panel {
+  transform: translateY(6px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease,
+    visibility 0.18s;
+}
+
+.group:hover .nav-atlas-panel,
+.group:focus-within .nav-atlas-panel {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .animate-atlas-rise,
+  .animate-atlas-rise-delay,
+  .animate-atlas-rise-delay-2 {
+    animation: none;
+  }
+
+  .nav-atlas-panel {
+    transition: none;
   }
 }
 
@@ -89,4 +187,12 @@ svg {
 
 #mobile-nav-toggle:checked ~ .header-bar .icon-close {
   display: block;
+}
+
+#mobile-nav-toggle:checked ~ .header-bar .menu-label-open {
+  display: none;
+}
+
+#mobile-nav-toggle:checked ~ .header-bar .menu-label-close {
+  display: inline;
 }

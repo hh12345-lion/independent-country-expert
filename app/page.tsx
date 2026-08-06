@@ -1,228 +1,273 @@
 import Link from "next/link";
 import { CTASection } from "@/components/ui/CTASection";
-import { CardGrid } from "@/components/ui/CardGrid";
 import { JsonLd } from "@/components/ui/JsonLd";
+import { AtlasHeroArt } from "@/components/ui/AtlasVisual";
 import { homepageGraph, websiteSchema } from "@/lib/schema";
 import { expertiseAreas } from "@/data/expertise-areas";
-import { services } from "@/data/services";
 import { countries } from "@/data/countries";
 import { caseTypes } from "@/data/case-types";
 
-const FEATURED_EXPERTISE = [
-  "country-condition-analysis",
-  "state-protection-assessment",
-  "cpin-challenge-reports",
-  "oral-evidence-tribunal",
+const PILLARS = [
+  {
+    num: "01",
+    title: "Duty to the tribunal",
+    body: "Under Ikarian Reefer and CPR Part 35, the expert’s paramount duty is to the tribunal — not the instructing party. Independence is the product, not a disclaimer.",
+  },
+  {
+    num: "02",
+    title: "Beyond CPIN summaries",
+    body: "Home Office CPIN documents are starting points. Profile-specific analysis uses dated primary sources, country guidance, and jurisdiction-specific expertise the generic summary cannot supply.",
+  },
+  {
+    num: "03",
+    title: "Practice Direction 2024 ready",
+    body: "Reports follow mandatory structure, independence standards, and exchange discipline. Adam Pipe 2025 guidance on assumed facts versus independent opinion is built into the brief.",
+  },
 ] as const;
 
 export default function HomePage() {
-  const featuredAreas = FEATURED_EXPERTISE.map((slug) =>
-    expertiseAreas.find((e) => e.slug === slug)
-  ).filter(Boolean);
-
   return (
     <>
       <JsonLd data={[homepageGraph(), websiteSchema()]} />
-      <section className="bg-[#2C3E50] py-14 md:py-20">
-        <div className="mx-auto min-w-0 max-w-6xl px-4 sm:px-6 lg:px-8">
-          <p className="text-xs font-medium uppercase tracking-wide text-[#B87333] sm:text-sm">
-            UK Immigration & Asylum Tribunals
+
+      {/* Hero — brand-first, one composition */}
+      <section className="atlas-field relative min-h-[min(88vh,720px)] overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 opacity-50 sm:opacity-60" aria-hidden>
+          <AtlasHeroArt className="h-full w-full object-cover" />
+        </div>
+        <div className="relative mx-auto flex min-h-[min(88vh,720px)] max-w-6xl flex-col justify-end px-4 pb-14 pt-20 sm:px-6 sm:pb-20 lg:px-8">
+          <p className="animate-atlas-rise text-[11px] font-semibold uppercase tracking-[0.22em] text-[#4A9B98]">
+            UK immigration &amp; asylum tribunals
           </p>
-          <h1 className="mt-4 max-w-4xl break-words text-2xl font-bold text-white min-[375px]:text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
-            Independent Country Expert Witness UK: Tribunal-Duty Reports for Asylum Appeals
+          <h1 className="animate-atlas-rise-delay font-display mt-4 max-w-3xl text-[clamp(2.5rem,8vw,4.75rem)] leading-[1.05] tracking-tight text-[#E7ECE8]">
+            Independent Country Expert
           </h1>
-          <p className="mt-6 max-w-2xl text-base text-white/80 sm:text-lg">
-            Independent Country Expert connects UK immigration solicitors, law firms, and Legal Aid practitioners
-            with truly independent country expert witnesses — CPR Part 35 compliant, Practice Direction 2024
-            ready, with profile-specific analysis beyond Home Office CPIN summaries.
+          <p className="animate-atlas-rise-delay-2 mt-5 max-w-xl text-base leading-relaxed text-[#B8C4BE] sm:text-lg">
+            We connect UK solicitors and Legal Aid practitioners with truly independent country expert
+            witnesses — CPR Part 35 reports that go beyond Home Office CPIN.
           </p>
-          <p className="mt-4 max-w-2xl text-sm text-white/70 sm:text-base">
-            We serve the United Kingdom only: First-tier Tribunal and Upper Tribunal asylum and immigration
-            proceedings across England, Wales, Scotland, and Northern Ireland. We do not provide expert
-            evidence services for tribunals or courts outside the UK.
-          </p>
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
+          <div className="animate-atlas-rise-delay-2 mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Link
               href="/contact"
-              className="inline-flex min-h-[44px] w-full items-center justify-center rounded-[8px] bg-[#B87333] px-6 py-3 font-semibold text-white hover:bg-[#9A6129] sm:w-auto sm:px-8"
+              className="inline-flex min-h-[48px] items-center justify-center bg-[#2B7A78] px-7 text-[12px] font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-[#4A9B98]"
             >
-              Contact Us
-            </Link>
-            <Link
-              href="/how-to-instruct"
-              className="inline-flex min-h-[44px] w-full items-center justify-center rounded-[8px] border-2 border-white/60 px-6 py-3 text-center font-semibold text-white hover:bg-white/10 sm:w-auto sm:px-8"
-            >
-              How to Instruct
+              Instruct an expert
             </Link>
             <Link
               href="/expert-independence-framework"
-              className="inline-flex min-h-[44px] w-full items-center justify-center rounded-[8px] border-2 border-white px-6 py-3 text-center font-semibold text-white hover:bg-white/10 sm:w-auto sm:px-8"
+              className="inline-flex min-h-[48px] items-center justify-center border border-[#B8C4BE]/px-7 text-[12px] font-semibold uppercase tracking-[0.14em] text-[#E7ECE8] transition-colors hover:border-[#4A9B98] hover:text-[#4A9B98]"
             >
-              Expert Independence Framework
+              Independence framework
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="bg-[#F5F7FA] py-12 sm:py-16">
-        <div className="mx-auto min-w-0 max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-[#2C3E50] sm:text-2xl md:text-3xl">
-            Why Independence Matters in Country Expert Evidence
-          </h2>
-          <p className="mt-4 max-w-3xl text-[#374151] leading-relaxed">
-            UK tribunals increasingly scrutinise expert evidence for independence, methodology, and source quality.
-            Under Ikarian Reefer, country experts owe a paramount duty to the tribunal — not the instructing party.
-            Solicitors need experts with dated primary sources and profile-specific analysis beyond generic Home Office
-            CPIN summaries.
-          </p>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                title: "Ikarian Reefer Duty",
-                desc: "Paramount duty to the tribunal under CPR Part 35 — independent, objective evidence regardless of who instructs or pays.",
-              },
-              {
-                title: "Practice Direction 2024",
-                desc: "Mandatory report structure, default 20-page limit, independence standards, and strict exchange deadlines.",
-              },
-              {
-                title: "Adam Pipe 2025",
-                desc: "Assumed facts vs independent opinion; source dating; advocacy risk identified and avoided in compliant reports.",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="rounded-[8px] border border-[#CBD5E1] bg-white p-6 shadow-[0_1px_3px_rgba(0,0,0,0.08)]"
-              >
-                <h3 className="font-semibold text-[#2C3E50]">{item.title}</h3>
-                <p className="mt-2 text-sm text-[#374151]">{item.desc}</p>
-              </div>
-            ))}
+      {/* Independence — editorial, not cards */}
+      <section className="bg-[#FAFBFA] py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#2B7A78]">
+              Why this hub exists
+            </p>
+            <h2 className="font-display mt-3 text-3xl tracking-tight text-[#0F241C] sm:text-4xl">
+              Tribunals test independence. Generic country notes fail that test.
+            </h2>
+            <p className="mt-4 text-[#33403A] leading-relaxed">
+              UK First-tier and Upper Tribunal proceedings need experts who can state sources, date them,
+              separate assumed facts from opinion, and answer the profile before the court — across England,
+              Wales, Scotland, and Northern Ireland only.
+            </p>
           </div>
+
+          <ol className="mt-12 space-y-0 border-t border-[#B8C4BE]">
+            {PILLARS.map((item) => (
+              <li
+                key={item.num}
+                className="grid gap-4 border-b border-[#B8C4BE] py-8 sm:grid-cols-[5rem_1fr] sm:gap-8"
+              >
+                <span className="font-display text-3xl text-[#2B7A78]">{item.num}</span>
+                <div>
+                  <h3 className="font-display text-2xl text-[#0F241C]">{item.title}</h3>
+                  <p className="mt-2 max-w-2xl leading-relaxed text-[#33403A]">{item.body}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+
           <Link
             href="/expert-independence-framework"
-            className="mt-8 inline-flex min-h-[44px] items-center font-semibold text-[#B87333] hover:underline"
+            className="mt-8 inline-flex min-h-[44px] items-center text-[12px] font-semibold uppercase tracking-[0.14em] text-[#2B7A78] hover:text-[#0F241C]"
           >
-            Read the complete Expert Independence Framework
+            Read the full framework →
           </Link>
         </div>
       </section>
 
-      <section className="py-12 sm:py-16">
-        <div className="mx-auto min-w-0 max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-[#2C3E50] sm:text-2xl">Core Expertise Areas</h2>
-          <p className="mt-2 max-w-3xl text-[#374151]">
-            Four primary areas of independent country expert evidence for UK asylum and immigration tribunals.
-          </p>
-          <div className="mt-8">
-            <CardGrid
-              items={featuredAreas.map((e) => ({
-                title: e!.title,
-                description: e!.metaDescription.slice(0, 120) + "...",
-                href: `/expertise-areas/${e!.slug}`,
-              }))}
-            />
-          </div>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+      {/* Expertise index — readable list, not card farm */}
+      <section className="border-t border-[#B8C4BE] bg-[#E7ECE8] py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#2B7A78]">
+                Expertise
+              </p>
+              <h2 className="font-display mt-2 text-3xl tracking-tight text-[#0F241C] sm:text-4xl">
+                What experts are instructed to do
+              </h2>
+            </div>
             <Link
               href="/expertise-areas"
-              className="inline-flex min-h-[44px] items-center font-semibold text-[#B87333] hover:underline"
+              className="text-[12px] font-semibold uppercase tracking-[0.14em] text-[#0F241C] hover:text-[#2B7A78]"
             >
-              View all expertise areas
+              All areas →
+            </Link>
+          </div>
+
+          <ul className="mt-10 divide-y divide-[#B8C4BE] border-y border-[#B8C4BE]">
+            {expertiseAreas.map((e) => (
+              <li key={e.slug}>
+                <Link
+                  href={`/expertise-areas/${e.slug}`}
+                  className="group flex flex-col gap-1 py-5 transition-colors sm:flex-row sm:items-baseline sm:justify-between sm:gap-8"
+                >
+                  <span className="font-display text-xl text-[#0F241C] group-hover:text-[#2B7A78]">
+                    {e.title}
+                  </span>
+                  <span className="max-w-md text-sm text-[#33403A] sm:text-right">
+                    {e.metaDescription.slice(0, 110)}…
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Country meridian index */}
+      <section className="bg-[#FAFBFA] py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#2B7A78]">
+            Country routing
+          </p>
+          <h2 className="font-display mt-2 max-w-xl text-3xl tracking-tight text-[#0F241C] sm:text-4xl">
+            Jurisdiction-specific experts across the network
+          </h2>
+          <p className="mt-4 max-w-2xl text-[#33403A] leading-relaxed">
+            This hub routes instructing solicitors to dedicated country sites. Each overview page explains
+            the fit for UK asylum and immigration work and links out to the specialist.
+          </p>
+
+          <div className="meridian-rule mt-10" />
+          <ul className="mt-8 flex flex-wrap gap-x-1 gap-y-3">
+            {countries.map((c, i) => (
+              <li key={c.slug} className="flex items-center">
+                <Link
+                  href={`/countries/${c.slug}`}
+                  className="font-display text-2xl text-[#0F241C] transition-colors hover:text-[#2B7A78] sm:text-3xl"
+                >
+                  {c.title}
+                </Link>
+                {i < countries.length - 1 && (
+                  <span className="mx-3 text-[#B8C4BE]" aria-hidden>
+                    ·
+                  </span>
+                )}
+              </li>
+            ))}
+          </ul>
+          <div className="meridian-rule mt-8" />
+
+          <div className="mt-8 flex flex-wrap gap-6">
+            <Link
+              href="/countries"
+              className="text-[12px] font-semibold uppercase tracking-[0.14em] text-[#2B7A78] hover:text-[#0F241C]"
+            >
+              Country index →
             </Link>
             <Link
               href="/network"
-              className="inline-flex min-h-[44px] items-center font-semibold text-[#B87333] hover:underline"
+              className="text-[12px] font-semibold uppercase tracking-[0.14em] text-[#2B7A78] hover:text-[#0F241C]"
             >
-              Network directory
+              Network directory →
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Case types — compact columns */}
+      <section className="border-t border-[#B8C4BE] bg-[#0F241C] py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#4A9B98]">
+                Proceedings
+              </p>
+              <h2 className="font-display mt-2 text-3xl tracking-tight text-[#E7ECE8] sm:text-4xl">
+                Case types we support
+              </h2>
+            </div>
             <Link
-              href="/contact"
-              className="inline-flex min-h-[44px] items-center font-semibold text-[#B87333] hover:underline"
+              href="/case-types"
+              className="text-[12px] font-semibold uppercase tracking-[0.14em] text-[#4A9B98] hover:text-[#E7ECE8]"
             >
-              Contact us
+              All case types →
             </Link>
           </div>
+
+          <ul className="mt-10 grid gap-x-10 gap-y-4 sm:grid-cols-2">
+            {caseTypes.map((c) => (
+              <li key={c.slug}>
+                <Link
+                  href={`/case-types/${c.slug}`}
+                  className="group flex min-h-[44px] items-baseline gap-3 border-b border-white/10 py-3"
+                >
+                  <span className="shrink-0 text-[#2B7A78]" aria-hidden>
+                    —
+                  </span>
+                  <span className="text-[#E7ECE8] transition-colors group-hover:text-[#4A9B98]">
+                    {c.title}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
-      <section className="bg-[#F5F7FA] py-12 sm:py-16">
-        <div className="mx-auto min-w-0 max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-[#2C3E50] sm:text-2xl">All Expertise Areas</h2>
-          <p className="mt-2 max-w-3xl text-[#374151]">
-            Eight core areas of independent country expert evidence for UK asylum and immigration tribunals.
-          </p>
-          <div className="mt-8">
-            <CardGrid
-              items={expertiseAreas.map((e) => ({
-                title: e.title,
-                description: e.metaDescription.slice(0, 120) + "...",
-                href: `/expertise-areas/${e.slug}`,
-              }))}
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 sm:py-16">
-        <div className="mx-auto min-w-0 max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-[#2C3E50] sm:text-2xl">Country Routing</h2>
-          <p className="mt-2 max-w-3xl text-[#374151]">
-            Route cases to jurisdiction-specific experts across our specialist network — overview pages with
-            outbound links to dedicated country sites.
-          </p>
-          <div className="mt-8">
-            <CardGrid
-              items={countries.slice(0, 8).map((c) => ({
-                title: c.title,
-                description: c.metaDescription.slice(0, 100) + "...",
-                href: `/countries/${c.slug}`,
-              }))}
-            />
-          </div>
+      {/* How instruct works — short high-value strip */}
+      <section className="bg-[#FAFBFA] py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-3xl tracking-tight text-[#0F241C] sm:text-4xl">
+            From brief to report
+          </h2>
+          <ol className="mt-10 grid gap-8 sm:grid-cols-3">
+            {[
+              {
+                t: "Send a short brief",
+                d: "Name, firm, email, and what you need — country, proceedings, and deadline if known.",
+              },
+              {
+                t: "We route the case",
+                d: "Within one business day you receive a proposed expert, scope, and timeline — Legal Aid compatible.",
+              },
+              {
+                t: "Tribunal-ready evidence",
+                d: "Independent report structured for Practice Direction 2024, with sources you can test in cross-examination.",
+              },
+            ].map((step, i) => (
+              <li key={step.t}>
+                <p className="font-display text-5xl text-[#2B7A78]/opacity-40">{i + 1}</p>
+                <h3 className="mt-2 font-display text-xl text-[#0F241C]">{step.t}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[#33403A]">{step.d}</p>
+              </li>
+            ))}
+          </ol>
           <Link
-            href="/countries"
-            className="mt-8 inline-flex min-h-[44px] items-center font-semibold text-[#B87333] hover:underline"
+            href="/how-to-instruct"
+            className="mt-10 inline-flex min-h-[44px] items-center text-[12px] font-semibold uppercase tracking-[0.14em] text-[#2B7A78] hover:text-[#0F241C]"
           >
-            View all countries
-          </Link>
-          <Link
-            href="/network"
-            className="ml-0 mt-3 inline-flex min-h-[44px] items-center font-semibold text-[#B87333] hover:underline sm:ml-6 sm:mt-8"
-          >
-            Network directory
-          </Link>
-        </div>
-      </section>
-
-      <section className="py-12 sm:py-16">
-        <div className="mx-auto min-w-0 max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-[#2C3E50] sm:text-2xl">Expert Witness Services</h2>
-          <CardGrid
-            items={services.map((s) => ({
-              title: s.title,
-              description: s.description,
-              href: `/expertise-areas/${s.expertiseSlug}`,
-            }))}
-          />
-        </div>
-      </section>
-
-      <section className="bg-[#F5F7FA] py-12 sm:py-16">
-        <div className="mx-auto min-w-0 max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-xl font-bold text-[#2C3E50] sm:text-2xl">Case Types</h2>
-          <CardGrid
-            items={caseTypes.slice(0, 6).map((c) => ({
-              title: c.title,
-              description: c.metaDescription.slice(0, 100) + "...",
-              href: `/case-types/${c.slug}`,
-            }))}
-          />
-          <Link
-            href="/case-types"
-            className="mt-8 inline-flex min-h-[44px] items-center font-semibold text-[#B87333] hover:underline"
-          >
-            View all case types
+            Full instruction guide →
           </Link>
         </div>
       </section>

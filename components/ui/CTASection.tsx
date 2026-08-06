@@ -1,29 +1,36 @@
 import Link from "next/link";
 
 export function CTASection({
-  title = "Contact Us — UK Tribunals Only",
-  description = "Submit your case details for confidential routing to the right jurisdiction-specific expert. UK immigration and asylum tribunals only. Response within one business day. Legal Aid compatible.",
+  title = "Ready to instruct?",
+  description = "Send a short brief. We route to a jurisdiction-specific independent expert — UK tribunals only. Reply within one business day.",
 }: {
   title?: string;
   description?: string;
 }) {
   return (
-    <section className="bg-[#B87333] py-12 sm:py-14 md:py-16">
-      <div className="mx-auto min-w-0 max-w-6xl px-4 text-center sm:px-6 lg:px-8">
-        <h2 className="text-xl font-bold text-white sm:text-2xl md:text-3xl">{title}</h2>
-        <p className="mx-auto mt-4 max-w-2xl text-sm text-white/90 sm:text-base">{description}</p>
-        <div className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-center sm:gap-4">
+    <section className="border-t border-[#B8C4BE] bg-[#E7ECE8] py-12 sm:py-14 md:py-16">
+      <div className="mx-auto flex min-w-0 max-w-6xl flex-col gap-8 px-4 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:px-8">
+        <div className="max-w-xl">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#2B7A78]">
+            Next step
+          </p>
+          <h2 className="font-display mt-2 text-3xl tracking-tight text-[#0F241C] sm:text-4xl">
+            {title}
+          </h2>
+          <p className="mt-3 text-sm leading-relaxed text-[#33403A] sm:text-base">{description}</p>
+        </div>
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
           <Link
             href="/contact"
-            className="inline-flex min-h-[44px] w-full items-center justify-center rounded-[8px] bg-[#2C3E50] px-6 py-3 font-semibold text-white transition hover:bg-[#243342] sm:w-auto sm:min-w-[200px] sm:px-8"
+            className="inline-flex min-h-[48px] items-center justify-center bg-[#0F241C] px-6 text-[12px] font-semibold uppercase tracking-[0.14em] text-[#E7ECE8] transition-colors hover:bg-[#2B7A78]"
           >
-            Contact Us
+            Contact
           </Link>
           <Link
             href="/how-to-instruct"
-            className="inline-flex min-h-[44px] w-full items-center justify-center rounded-[8px] border-2 border-white px-6 py-3 font-semibold text-white transition hover:bg-white/10 sm:w-auto sm:min-w-[200px] sm:px-8"
+            className="inline-flex min-h-[48px] items-center justify-center border border-[#0F241C] px-6 text-[12px] font-semibold uppercase tracking-[0.14em] text-[#0F241C] transition-colors hover:border-[#2B7A78] hover:text-[#2B7A78]"
           >
-            How to Instruct
+            How to instruct
           </Link>
         </div>
       </div>

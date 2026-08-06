@@ -39,28 +39,28 @@ export default async function CountryPage({ params }: { params: Promise<{ slug: 
       <PageJsonLd breadcrumbs={crumbs} faqs={country.faqs} />
       <PageShell title={country.h1} breadcrumbs={crumbs}>
         {country.content.map((p, i) => (
-          <p key={i} className="mb-4 text-[#374151] leading-relaxed">
+          <p key={i} className="mb-4 text-[#33403A] leading-relaxed">
             {p}
           </p>
         ))}
 
-        <h2 className="mt-8 text-lg font-bold text-[#2C3E50]">Key Asylum Profiles</h2>
+        <h2 className="mt-8 text-lg font-bold text-[#0F241C]">Key Asylum Profiles</h2>
         <ul className="mt-4 flex flex-wrap gap-2">
           {country.keyProfiles.map((profile) => (
             <li
               key={profile}
-              className="rounded-[8px] border border-[#CBD5E1] bg-[#F5F7FA] px-3 py-2 text-sm text-[#374151]"
+              className="rounded-[8px] border border-[#B8C4BE] bg-[#E7ECE8] px-3 py-2 text-sm text-[#33403A]"
             >
               {profile}
             </li>
           ))}
         </ul>
 
-        <div className="mt-10 rounded-[8px] border border-[#CBD5E1] bg-[#F5F7FA] p-6">
-          <h2 className="text-lg font-bold text-[#2C3E50]">
+        <div className="mt-10 rounded-[8px] border border-[#B8C4BE] bg-[#E7ECE8] p-6">
+          <h2 className="text-lg font-bold text-[#0F241C]">
             Specialist {country.title} Expert Evidence
           </h2>
-          <p className="mt-2 text-[#374151]">
+          <p className="mt-2 text-[#33403A]">
             For comprehensive {country.title}-specific asylum profiles, CPIN analysis, and deep country content,
             visit our dedicated network site. This page provides a solicitor-focused overview — detailed MOJ
             analysis, profile pages, and country-deep content are maintained on the specialist site.
@@ -69,11 +69,11 @@ export default async function CountryPage({ params }: { params: Promise<{ slug: 
             href={country.outboundUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 inline-flex min-h-[44px] items-center rounded-[8px] bg-[#B87333] px-6 py-3 font-semibold text-white hover:bg-[#9A6129]"
+            className="mt-4 inline-flex min-h-[44px] items-center rounded-[8px] bg-[#2B7A78] px-6 py-3 font-semibold text-white hover:bg-[#236663]"
           >
             Visit {country.outboundLabel} →
           </a>
-          <p className="mt-2 text-sm text-[#374151]">
+          <p className="mt-2 text-sm text-[#33403A]">
             {country.networkSite}
           </p>
         </div>

@@ -13,36 +13,51 @@ export default function OpenGraphImage() {
           height: "100%",
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: "#2C3E50",
-          padding: 80,
+          justifyContent: "flex-end",
+          backgroundColor: "#0F241C",
+          backgroundImage:
+            "radial-gradient(ellipse 70% 50% at 75% 35%, rgba(43,122,120,0.35), transparent 55%)",
+          padding: 72,
         }}
       >
         <div
           style={{
-            fontSize: 56,
-            fontWeight: 700,
-            color: "#FFFFFF",
+            display: "flex",
+            fontSize: 18,
+            fontWeight: 600,
+            letterSpacing: "0.2em",
+            textTransform: "uppercase",
+            color: "#4A9B98",
+          }}
+        >
+          UK tribunals only
+        </div>
+        <div
+          style={{
+            marginTop: 20,
+            display: "flex",
+            fontSize: 64,
+            fontWeight: 400,
+            color: "#E7ECE8",
             letterSpacing: "-0.02em",
-            textAlign: "center",
-            lineHeight: 1.1,
+            lineHeight: 1.05,
+            maxWidth: 900,
           }}
         >
           Independent Country Expert
         </div>
-        <p
+        <div
           style={{
-            marginTop: 32,
-            fontSize: 32,
-            fontWeight: 600,
-            color: "#B87333",
-            textAlign: "center",
-            lineHeight: 1.3,
+            marginTop: 24,
+            display: "flex",
+            fontSize: 26,
+            color: "#B8C4BE",
+            maxWidth: 720,
+            lineHeight: 1.35,
           }}
         >
-          UK Immigration Tribunal Expert Witness Services
-        </p>
+          Independent country evidence for UK immigration and asylum tribunals
+        </div>
       </div>
     ),
     { ...size }

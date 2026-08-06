@@ -12,12 +12,12 @@ export function CookieSettingsButton({ className = "", variant = "footer" }: Pro
 
   const base =
     variant === "footer"
-      ? "inline-flex min-h-[44px] items-center text-sm text-white/70 hover:text-[#B87333] focus:outline-none focus-visible:underline"
-      : "inline-flex min-h-[44px] items-center text-sm font-medium text-[#B87333] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B87333]";
+      ? "inline-flex min-h-[44px] items-center text-[12px] uppercase tracking-[0.12em] text-[#B8C4BE] hover:text-[#E7ECE8] focus:outline-none focus-visible:underline"
+      : "inline-flex min-h-[44px] items-center text-sm font-medium text-[#2B7A78] hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2B7A78]";
 
   return (
     <button type="button" onClick={openPreferences} className={`${base} ${className}`}>
-      Cookie Settings
+      Cookies
     </button>
   );
 }
