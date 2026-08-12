@@ -31,14 +31,14 @@ export function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50">
+    <header className="sticky top-0 z-50 bg-[#FAFBFA]">
       {/* Masthead rail */}
-      <div className="hidden border-b border-[#0F241C]/bg-[#0F241C] text-[#E7ECE8] sm:block">
+      <div className="hidden border-b border-[#0F241C] bg-[#0F241C] text-[#E7ECE8] sm:block">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-1.5 text-[11px] tracking-[0.08em] sm:px-6 lg:px-8">
           <p className="uppercase text-[#4A9B98]">UK tribunals · England · Wales · Scotland · NI</p>
           <a
             href={`mailto:${SITE_EMAIL}`}
-            className="truncate text-[#E7ECE8]/hover:text-white"
+            className="truncate text-[#E7ECE8] hover:text-white"
           >
             {SITE_EMAIL}
           </a>
@@ -53,7 +53,7 @@ export function Header() {
         aria-hidden
       />
 
-      <div className="header-bar border-b border-[#B8C4BE] bg-[#FAFBFA]/backdrop-blur-sm">
+      <div className="header-bar border-b border-[#B8C4BE] bg-[#FAFBFA]">
         <div className="mx-auto flex max-w-7xl items-stretch gap-4 px-4 sm:px-6 lg:px-8">
           <Link
             href="/"
