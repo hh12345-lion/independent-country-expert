@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Figtree, Instrument_Serif } from "next/font/google";
+import { Outfit, Zilla_Slab } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { UkRegionBar } from "@/components/layout/UkRegionBar";
 import { Footer } from "@/components/layout/Footer";
@@ -8,16 +8,16 @@ import { ConsentDefaultsScript } from "@/components/cookies/ConsentDefaultsScrip
 import { SITE_URL } from "@/lib/constants";
 import "./globals.css";
 
-const figtree = Figtree({
+const outfit = Outfit({
   subsets: ["latin"],
-  variable: "--font-figtree",
+  variable: "--font-outfit",
   display: "swap",
 });
 
-const instrument = Instrument_Serif({
+const zilla = Zilla_Slab({
   subsets: ["latin"],
-  weight: "400",
-  variable: "--font-instrument",
+  weight: ["400", "500", "600"],
+  variable: "--font-zilla",
   display: "swap",
 });
 
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en-GB" className={`${figtree.variable} ${instrument.variable} h-full`}>
+    <html lang="en-GB" className={`${outfit.variable} ${zilla.variable} h-full`}>
       <body className="flex min-h-full flex-col font-sans antialiased">
         <ConsentDefaultsScript />
         <CookieConsentProvider>

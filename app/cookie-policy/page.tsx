@@ -22,20 +22,20 @@ const COOKIE_TABLE = [
 export default function CookiePolicyPage() {
   return (
     <PageShell title="Cookie Policy" breadcrumbs={[{ label: "Home", href: "/" }, { label: "Cookie Policy" }]}>
-      <p className="text-[#33403A] leading-relaxed">
+      <p className="text-[#3A4148] leading-relaxed">
         This Cookie Policy explains how IndependentCountryExpert.com (&quot;we&quot;, &quot;us&quot;) uses cookies
         and similar technologies. We comply with the UK GDPR, the EU ePrivacy Directive (as implemented in UK
         PECR), and apply CCPA-informed controls for California visitors.
       </p>
 
-      <h2 className="mt-8 text-lg font-bold text-[#0F241C]">What are cookies?</h2>
-      <p className="mt-4 text-[#33403A] leading-relaxed">
+      <h2 className="mt-8 text-lg font-bold text-[#191B22]">What are cookies?</h2>
+      <p className="mt-4 text-[#3A4148] leading-relaxed">
         Cookies are small text files stored on your device. We also use localStorage for consent records.
         Strictly necessary technologies run the site; optional cookies require your consent before loading.
       </p>
 
-      <h2 className="mt-8 text-lg font-bold text-[#0F241C]">Cookie categories</h2>
-      <ul className="mt-4 list-disc space-y-2 pl-6 text-[#33403A]">
+      <h2 className="mt-8 text-lg font-bold text-[#191B22]">Cookie categories</h2>
+      <ul className="mt-4 list-disc space-y-2 pl-6 text-[#3A4148]">
         <li>
           <strong>Necessary</strong> — Required for security, consent storage, and core functionality. Always
           active.
@@ -52,55 +52,55 @@ export default function CookiePolicyPage() {
         </li>
       </ul>
 
-      <h2 className="mt-8 text-lg font-bold text-[#0F241C]">Third-party scripts (consent-gated)</h2>
-      <p className="mt-4 text-[#33403A] leading-relaxed">
+      <h2 className="mt-8 text-lg font-bold text-[#191B22]">Third-party scripts (consent-gated)</h2>
+      <p className="mt-4 text-[#3A4148] leading-relaxed">
         Non-essential scripts are blocked until you grant consent. We use Google Consent Mode v2 so Google tags
         respect your choices immediately when you update preferences.
       </p>
 
-      <h2 className="mt-8 text-lg font-bold text-[#0F241C]">Cookie inventory</h2>
-      <div className="mt-4 overflow-x-auto rounded-[8px] border border-[#B8C4BE]">
+      <h2 className="mt-8 text-lg font-bold text-[#191B22]">Cookie inventory</h2>
+      <div className="mt-4 overflow-x-auto rounded-[8px] border border-[#C9C4BA]">
         <table className="w-full min-w-[520px] border-collapse text-sm">
           <thead>
-            <tr className="border-b border-[#B8C4BE] bg-[#E7ECE8]">
-              <th className="px-3 py-3 text-left font-semibold text-[#0F241C]">Name</th>
-              <th className="px-3 py-3 text-left font-semibold text-[#0F241C]">Category</th>
-              <th className="px-3 py-3 text-left font-semibold text-[#0F241C]">Provider</th>
-              <th className="px-3 py-3 text-left font-semibold text-[#0F241C]">Retention</th>
-              <th className="px-3 py-3 text-left font-semibold text-[#0F241C]">Purpose</th>
+            <tr className="border-b border-[#C9C4BA] bg-[#E8EDF2]">
+              <th className="px-3 py-3 text-left font-semibold text-[#191B22]">Name</th>
+              <th className="px-3 py-3 text-left font-semibold text-[#191B22]">Category</th>
+              <th className="px-3 py-3 text-left font-semibold text-[#191B22]">Provider</th>
+              <th className="px-3 py-3 text-left font-semibold text-[#191B22]">Retention</th>
+              <th className="px-3 py-3 text-left font-semibold text-[#191B22]">Purpose</th>
             </tr>
           </thead>
           <tbody>
             {COOKIE_TABLE.map(([name, cat, provider, retention, purpose]) => (
-              <tr key={name} className="border-b border-[#B8C4BE]">
-                <td className="px-3 py-3 font-mono text-xs text-[#0F241C]">{name}</td>
-                <td className="px-3 py-3 text-[#33403A]">{cat}</td>
-                <td className="px-3 py-3 text-[#33403A]">{provider}</td>
-                <td className="px-3 py-3 text-[#33403A]">{retention}</td>
-                <td className="px-3 py-3 text-[#33403A]">{purpose}</td>
+              <tr key={name} className="border-b border-[#C9C4BA]">
+                <td className="px-3 py-3 font-mono text-xs text-[#191B22]">{name}</td>
+                <td className="px-3 py-3 text-[#3A4148]">{cat}</td>
+                <td className="px-3 py-3 text-[#3A4148]">{provider}</td>
+                <td className="px-3 py-3 text-[#3A4148]">{retention}</td>
+                <td className="px-3 py-3 text-[#3A4148]">{purpose}</td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
 
-      <h2 className="mt-8 text-lg font-bold text-[#0F241C]">Managing your preferences</h2>
-      <p className="mt-4 text-[#33403A] leading-relaxed">
+      <h2 className="mt-8 text-lg font-bold text-[#191B22]">Managing your preferences</h2>
+      <p className="mt-4 text-[#3A4148] leading-relaxed">
         Use <strong>Cookie Settings</strong> in the site footer to reopen the preference centre at any time.
         Consent is stored for 365 days, after which we will ask again. Withdrawing consent stops optional scripts
         from loading on subsequent page views.
       </p>
 
-      <h2 className="mt-8 text-lg font-bold text-[#0F241C]">Your rights</h2>
-      <p className="mt-4 text-[#33403A] leading-relaxed">
+      <h2 className="mt-8 text-lg font-bold text-[#191B22]">Your rights</h2>
+      <p className="mt-4 text-[#3A4148] leading-relaxed">
         You may access, rectify, or erase personal data processed via cookies. See our{" "}
-        <Link href="/privacy" className="font-semibold text-[#2B7A78] hover:underline">
+        <Link href="/privacy" className="font-semibold text-[#0B6E99] hover:underline">
           Privacy Policy
         </Link>{" "}
         for full GDPR rights and contact details.
       </p>
 
-      <p className="mt-6 text-sm text-[#33403A]">
+      <p className="mt-6 text-sm text-[#3A4148]">
         Last updated: June 2026
       </p>
     </PageShell>

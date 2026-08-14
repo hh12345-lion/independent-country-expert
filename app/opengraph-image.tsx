@@ -14,9 +14,9 @@ export default function OpenGraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "flex-end",
-          backgroundColor: "#0F241C",
+          backgroundColor: "#191B22",
           backgroundImage:
-            "radial-gradient(ellipse 70% 50% at 75% 35%, rgba(43,122,120,0.35), transparent 55%)",
+            "radial-gradient(ellipse 70% 50% at 75% 35%, rgba(11,110,153,0.35), transparent 55%)",
           padding: 72,
         }}
       >
@@ -27,7 +27,7 @@ export default function OpenGraphImage() {
             fontWeight: 600,
             letterSpacing: "0.2em",
             textTransform: "uppercase",
-            color: "#4A9B98",
+            color: "#3D8FB5",
           }}
         >
           UK tribunals only
@@ -38,7 +38,7 @@ export default function OpenGraphImage() {
             display: "flex",
             fontSize: 64,
             fontWeight: 400,
-            color: "#E7ECE8",
+            color: "#E8EDF2",
             letterSpacing: "-0.02em",
             lineHeight: 1.05,
             maxWidth: 900,
@@ -51,7 +51,7 @@ export default function OpenGraphImage() {
             marginTop: 24,
             display: "flex",
             fontSize: 26,
-            color: "#B8C4BE",
+            color: "#C9C4BA",
             maxWidth: 720,
             lineHeight: 1.35,
           }}

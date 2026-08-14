@@ -42,13 +42,13 @@ export default async function ExpertiseAreaPage({ params }: { params: Promise<{ 
       <PageJsonLd breadcrumbs={crumbs} faqs={allFaqs} />
       <PageShell title={area.h1} breadcrumbs={crumbs}>
         {area.content.map((p, i) => (
-          <p key={i} className="mb-4 text-[#33403A] leading-relaxed">
+          <p key={i} className="mb-4 text-[#3A4148] leading-relaxed">
             {p}
           </p>
         ))}
         {area.relatedExpertise.length > 0 && (
           <>
-            <h2 className="mt-8 text-lg font-bold text-[#0F241C]">Related Expertise</h2>
+            <h2 className="mt-8 text-lg font-bold text-[#191B22]">Related Expertise</h2>
             <ul className="mt-4 space-y-2">
               {area.relatedExpertise.map((s) => {
                 const related = getExpertiseArea(s);
@@ -56,7 +56,7 @@ export default async function ExpertiseAreaPage({ params }: { params: Promise<{ 
                   <li key={s}>
                     <Link
                       href={`/expertise-areas/${s}`}
-                      className="inline-flex min-h-[44px] items-center text-[#2B7A78] hover:underline"
+                      className="inline-flex min-h-[44px] items-center text-[#0B6E99] hover:underline"
                     >
                       {related?.title ?? s}
                     </Link>
@@ -68,7 +68,7 @@ export default async function ExpertiseAreaPage({ params }: { params: Promise<{ 
         )}
         <RelatedLinks links={getExpertiseRelatedLinks(slug)} />
       </PageShell>
-      <div className="border-t border-[#B8C4BE] bg-[#E7ECE8]">
+      <div className="border-t border-[#C9C4BA] bg-[#E8EDF2]">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
           <FAQSection
             faqs={allFaqs}

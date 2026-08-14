@@ -22,7 +22,7 @@ export default function ServicesPage() {
         subtitle="CPR Part 35 and Practice Direction 2024 compliant reports routed to jurisdiction-specific specialists."
         breadcrumbs={crumbs}
       >
-        <p className="mb-8 text-[#33403A] leading-relaxed">
+        <p className="mb-8 text-[#3A4148] leading-relaxed">
           Independent Country Expert provides eight specialist services for UK immigration solicitors, law firms,
           and Legal Aid practitioners. All reports are prepared by qualified country experts with demonstrable
           independence and current primary source knowledge.
@@ -34,12 +34,12 @@ export default function ServicesPage() {
             href: `/expertise-areas/${s.expertiseSlug}`,
           }))}
         />
-        <p className="mt-8 text-[#33403A]">
-          <Link href="/how-to-instruct" className="font-semibold text-[#2B7A78] hover:underline">
-            How to instruct
+        <p className="mt-8 text-[#3A4148]">
+          <Link href="/how-to-instruct" className="font-semibold text-[#0B6E99] hover:underline">
+            How we route a case
           </Link>
           {" · "}
-          <Link href="/contact" className="font-semibold text-[#2B7A78] hover:underline">
+          <Link href="/contact" className="font-semibold text-[#0B6E99] hover:underline">
             Contact us
           </Link>
         </p>

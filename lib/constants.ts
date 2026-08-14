@@ -10,16 +10,16 @@ export const SITE_REGION_NOTICE =
 export const LINKEDIN_URL =
   "https://www.linkedin.com/company/independent-country-expert";
 
-/** Cartographic evidence desk — peat ink + archival teal */
+/** Gazette ledger — graphite ink + lagoon (not the sister-site palettes) */
 export const COLORS = {
-  primary: "#0F241C",
-  primaryHover: "#0A1914",
-  accent: "#2B7A78",
-  accentHover: "#236663",
-  accentLight: "#4A9B98",
-  background: "#FAFBFA",
-  sectionAlt: "#E7ECE8",
-  border: "#B8C4BE",
-  heading: "#0F241C",
-  body: "#33403A",
+  primary: "#191B22",
+  primaryHover: "#101218",
+  accent: "#0B6E99",
+  accentHover: "#085578",
+  accentLight: "#3D8FB5",
+  background: "#F7F4EF",
+  sectionAlt: "#E8EDF2",
+  border: "#C9C4BA",
+  heading: "#191B22",
+  body: "#3A4148",
 } as const;

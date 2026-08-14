@@ -6,8 +6,8 @@ import { SITE_EMAIL } from "@/lib/constants";
 import { postSubmitLead } from "@/lib/submit-lead";
 
 const inputClass =
-  "w-full min-w-0 border-0 border-b border-[#B8C4BE] bg-transparent px-0 py-3 text-base text-[#33403A] placeholder:text-[#B8C4BE] focus:border-[#2B7A78] focus:outline-none focus:ring-0 min-h-[44px]";
-const labelClass = "mb-1 block text-[11px] font-semibold uppercase tracking-[0.14em] text-[#0F241C]";
+  "w-full min-w-0 border-0 border-b border-[#C9C4BA] bg-transparent px-0 py-3 text-base text-[#3A4148] placeholder:text-[#C9C4BA] focus:border-[#0B6E99] focus:outline-none focus:ring-0 min-h-[44px]";
+const labelClass = "mb-1 block text-[11px] font-semibold uppercase tracking-[0.14em] text-[#191B22]";
 
 export function ContactForm() {
   const router = useRouter();
@@ -114,7 +114,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="inline-flex min-h-[48px] w-full items-center justify-center bg-[#0F241C] px-6 text-[12px] font-semibold uppercase tracking-[0.14em] text-[#E7ECE8] transition-colors hover:bg-[#2B7A78] disabled:opacity-60 sm:w-auto"
+        className="inline-flex min-h-[48px] w-full items-center justify-center bg-[#191B22] px-6 text-[12px] font-semibold uppercase tracking-[0.14em] text-[#E8EDF2] transition-colors hover:bg-[#0B6E99] disabled:opacity-60 sm:w-auto"
       >
         {status === "loading" ? "Sending…" : "Send brief"}
       </button>

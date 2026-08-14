@@ -31,26 +31,26 @@ export default function QualificationsPage() {
         subtitle="What UK solicitors should assess when choosing an independent country expert witness."
         breadcrumbs={crumbs}
       >
-        <p className="text-[#33403A] leading-relaxed">
+        <p className="text-[#3A4148] leading-relaxed">
           Independent country experts across our network are assessed against rigorous qualification criteria.
           Under Ikarian Reefer and CPR Part 35, the expert&apos;s independence and methodology matter as much as
           their field knowledge. Solicitors should verify credentials before instruction.
         </p>
         <ul className="mt-8 space-y-4">
           {qualifications.map((q) => (
-            <li key={q} className="flex gap-3 text-[#33403A]">
-              <span className="mt-1 text-[#2B7A78]" aria-hidden="true">✓</span>
+            <li key={q} className="flex gap-3 text-[#3A4148]">
+              <span className="mt-1 text-[#0B6E99]" aria-hidden="true">✓</span>
               {q}
             </li>
           ))}
         </ul>
-        <p className="mt-8 text-[#33403A] leading-relaxed">
+        <p className="mt-8 text-[#3A4148] leading-relaxed">
           Read our{" "}
-          <Link href="/guides/choosing-country-expert-guide" className="font-semibold text-[#2B7A78] hover:underline">
+          <Link href="/guides/choosing-country-expert-guide" className="font-semibold text-[#0B6E99] hover:underline">
             guide to choosing the right country expert
           </Link>{" "}
           and the{" "}
-          <Link href="/expert-independence-framework" className="font-semibold text-[#2B7A78] hover:underline">
+          <Link href="/expert-independence-framework" className="font-semibold text-[#0B6E99] hover:underline">
             Expert Independence Framework
           </Link>{" "}
           for detailed assessment criteria.

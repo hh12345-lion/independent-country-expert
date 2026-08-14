@@ -13,17 +13,17 @@ export const metadata = createMetadata({
 export default function TermsPage() {
   return (
     <PageShell title="Terms of Use" breadcrumbs={[{ label: "Home", href: "/" }, { label: "Terms" }]}>
-      <p className="text-[#33403A] leading-relaxed">
+      <p className="text-[#3A4148] leading-relaxed">
         IndependentCountryExpert.com is an information and instruction routing service connecting UK immigration
         solicitors with independent country expert witnesses. We are not a law firm and do not provide legal advice.
         Content on this site is for general information purposes and does not constitute legal advice.
       </p>
-      <p className="mt-4 text-[#33403A] leading-relaxed">
+      <p className="mt-4 text-[#3A4148] leading-relaxed">
         Expert witness services are provided by independent experts within our network, not by
         IndependentCountryExpert.com directly. Fees, scope, and timelines are agreed between the instructing
         solicitor and the appointed expert.
       </p>
-      <p className="mt-4 text-[#33403A] leading-relaxed">
+      <p className="mt-4 text-[#3A4148] leading-relaxed">
         Outbound links to network sites are provided for convenience. We are not responsible for the content of
         third-party sites. For enquiries, contact {SITE_EMAIL}.
       </p>

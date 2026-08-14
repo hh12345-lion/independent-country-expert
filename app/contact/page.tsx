@@ -5,7 +5,7 @@ import { createMetadata } from "@/lib/metadata";
 import { SITE_EMAIL, SITE_REGION_NOTICE } from "@/lib/constants";
 
 export const metadata = createMetadata({
-  title: "Instruct an Independent Country Expert UK | Contact",
+  title: "Route a case | Independent Country Expert UK",
   description:
     "Instruct an independent country expert witness for UK asylum tribunals only. Submit a short brief for routing to the right jurisdiction-specific specialist. Response within one business day.",
   path: "/contact",
@@ -18,14 +18,14 @@ export default function ContactPage() {
     <>
       <PageJsonLd breadcrumbs={crumbs} />
       <PageShell
-        title="Instruct an expert"
+        title="Route a case"
         subtitle="Short brief. We reply within one business day with proposed expert, scope, and timeline."
         breadcrumbs={crumbs}
       >
-        <p className="mb-2 max-w-xl text-sm text-[#33403A]">{SITE_REGION_NOTICE}</p>
-        <p className="mb-10 max-w-xl text-[#33403A] leading-relaxed">
+        <p className="mb-2 max-w-xl text-sm text-[#3A4148]">{SITE_REGION_NOTICE}</p>
+        <p className="mb-10 max-w-xl text-[#3A4148] leading-relaxed">
           Prefer email?{" "}
-          <a href={`mailto:${SITE_EMAIL}`} className="font-medium text-[#2B7A78] hover:underline">
+          <a href={`mailto:${SITE_EMAIL}`} className="font-medium text-[#0B6E99] hover:underline">
             {SITE_EMAIL}
           </a>
         </p>

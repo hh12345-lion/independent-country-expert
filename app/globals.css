@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-primary: #0f241c;
-  --color-primary-hover: #0a1914;
-  --color-accent: #2b7a78;
-  --color-accent-hover: #236663;
-  --color-accent-light: #4a9b98;
-  --color-section-alt: #e7ece8;
-  --color-border: #b8c4be;
-  --color-body: #33403a;
-  --color-paper: #fafbfa;
-  --color-mist: #e7ece8;
-  --font-sans: var(--font-figtree);
-  --font-display: var(--font-instrument);
-  --radius-card: 2px;
-  --radius-sm: 2px;
-  --shadow-card: 0 1px 0 rgba(15, 36, 28, 0.06);
+  --color-primary: #191b22;
+  --color-primary-hover: #101218;
+  --color-accent: #0b6e99;
+  --color-accent-hover: #085578;
+  --color-accent-light: #3d8fb5;
+  --color-section-alt: #e8edf2;
+  --color-border: #c9c4ba;
+  --color-body: #3a4148;
+  --color-paper: #f7f4ef;
+  --color-mist: #e8edf2;
+  --font-sans: var(--font-outfit);
+  --font-display: var(--font-zilla);
+  --radius-card: 0px;
+  --radius-sm: 0px;
+  --shadow-card: none;
   --breakpoint-xs: 375px;
 }
 
@@ -26,13 +26,13 @@ html {
 body {
   background: var(--color-paper);
   color: var(--color-body);
-  font-family: var(--font-figtree), system-ui, sans-serif;
+  font-family: var(--font-outfit), system-ui, sans-serif;
   overflow-x: hidden;
   min-width: 320px;
 }
 
 .font-display {
-  font-family: var(--font-instrument), Georgia, "Times New Roman", serif;
+  font-family: var(--font-zilla), "Palatino Linotype", Palatino, serif;
 }
 
 main,
@@ -47,34 +47,36 @@ svg {
   height: auto;
 }
 
-/* Atlas field — contour + meridian atmosphere */
-.atlas-field {
-  background-color: #0f241c;
-  background-image:
-    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(43, 122, 120, 0.22), transparent 55%),
-    radial-gradient(ellipse 50% 40% at 15% 80%, rgba(74, 155, 152, 0.12), transparent 50%),
-    linear-gradient(rgba(232, 236, 230, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(232, 236, 230, 0.04) 1px, transparent 1px);
-  background-size: auto, auto, 48px 48px, 48px 48px;
+/* Double-rule gazette rules */
+.folio-rule {
+  height: 3px;
+  border-top: 1px solid var(--color-primary);
+  border-bottom: 1px solid var(--color-primary);
+  background: transparent;
 }
 
-.atlas-panel {
-  background-color: #fafbfa;
-  background-image:
-    linear-gradient(rgba(15, 36, 28, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(15, 36, 28, 0.04) 1px, transparent 1px);
-  background-size: 24px 24px;
-}
-
-.meridian-rule {
+.folio-rule-thin {
   height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--color-border) 12%,
-    var(--color-border) 88%,
-    transparent
-  );
+  background: var(--color-border);
+}
+
+.nav-folio-panel {
+  transform: translateY(4px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.16s ease,
+    transform 0.16s ease,
+    visibility 0.16s;
+}
+
+.group:hover .nav-folio-panel,
+.group:focus-within .nav-folio-panel {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 @keyframes slideUp {
@@ -97,69 +99,12 @@ svg {
   }
 }
 
-@keyframes atlasRise {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes meridianDraw {
-  from {
-    stroke-dashoffset: 400;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-.animate-atlas-rise {
-  animation: atlasRise 0.7s ease-out both;
-}
-
-.animate-atlas-rise-delay {
-  animation: atlasRise 0.7s ease-out 0.12s both;
-}
-
-.animate-atlas-rise-delay-2 {
-  animation: atlasRise 0.7s ease-out 0.24s both;
-}
-
-.nav-atlas-panel {
-  transform: translateY(6px);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition:
-    opacity 0.18s ease,
-    transform 0.18s ease,
-    visibility 0.18s;
-}
-
-.group:hover .nav-atlas-panel,
-.group:focus-within .nav-atlas-panel {
-  transform: translateY(0);
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 
-  .animate-atlas-rise,
-  .animate-atlas-rise-delay,
-  .animate-atlas-rise-delay-2 {
-    animation: none;
-  }
-
-  .nav-atlas-panel {
+  .nav-folio-panel {
     transition: none;
   }
 }

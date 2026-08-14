@@ -59,30 +59,30 @@ export default function CpinCountryGuidancePage() {
         breadcrumbs={crumbs}
       >
         <HubPageLinks />
-        <p className="text-[#33403A] leading-relaxed">
+        <p className="text-[#3A4148] leading-relaxed">
           UK asylum tribunals weigh multiple sources of country evidence. Understanding how Home Office CPINs,
           binding Country Guidance decisions, EUAA guidance, and independent expert reports interact is essential
           for effective tribunal submissions. This guide provides the framework — country-specific CG analysis is
           maintained on dedicated network sites.
         </p>
 
-        <h2 className="mt-8 text-xl font-bold text-[#0F241C]">Framework Comparison</h2>
+        <h2 className="mt-8 text-xl font-bold text-[#191B22]">Framework Comparison</h2>
         <div className="mt-6">
           <ResponsiveTableWrap label="Swipe to view framework table">
             <table className="w-full min-w-[480px] border-collapse text-sm">
               <thead>
-                <tr className="border-b border-[#B8C4BE] bg-[#E7ECE8]">
-                  <th className="px-3 py-3 text-left font-semibold text-[#0F241C] sm:px-4">Framework</th>
-                  <th className="px-3 py-3 text-left font-semibold text-[#0F241C] sm:px-4">Applies To</th>
-                  <th className="px-3 py-3 text-left font-semibold text-[#0F241C] sm:px-4">Key Principle</th>
+                <tr className="border-b border-[#C9C4BA] bg-[#E8EDF2]">
+                  <th className="px-3 py-3 text-left font-semibold text-[#191B22] sm:px-4">Framework</th>
+                  <th className="px-3 py-3 text-left font-semibold text-[#191B22] sm:px-4">Applies To</th>
+                  <th className="px-3 py-3 text-left font-semibold text-[#191B22] sm:px-4">Key Principle</th>
                 </tr>
               </thead>
               <tbody>
                 {frameworkTable.map(([framework, applies, principle]) => (
-                  <tr key={framework} className="border-b border-[#B8C4BE]">
-                    <td className="px-3 py-3 font-medium text-[#0F241C] sm:px-4">{framework}</td>
-                    <td className="px-3 py-3 text-[#33403A] sm:px-4">{applies}</td>
-                    <td className="px-3 py-3 text-[#33403A] sm:px-4">{principle}</td>
+                  <tr key={framework} className="border-b border-[#C9C4BA]">
+                    <td className="px-3 py-3 font-medium text-[#191B22] sm:px-4">{framework}</td>
+                    <td className="px-3 py-3 text-[#3A4148] sm:px-4">{applies}</td>
+                    <td className="px-3 py-3 text-[#3A4148] sm:px-4">{principle}</td>
                   </tr>
                 ))}
               </tbody>
@@ -90,23 +90,23 @@ export default function CpinCountryGuidancePage() {
           </ResponsiveTableWrap>
         </div>
 
-        <h2 className="mt-10 text-xl font-bold text-[#0F241C]">CPIN vs Independent Country Expert Report</h2>
+        <h2 className="mt-10 text-xl font-bold text-[#191B22]">CPIN vs Independent Country Expert Report</h2>
         <div className="mt-6">
           <ResponsiveTableWrap label="Swipe to view CPIN vs expert comparison">
             <table className="w-full min-w-[480px] border-collapse text-sm">
               <thead>
-                <tr className="border-b border-[#B8C4BE] bg-[#E7ECE8]">
-                  <th className="px-3 py-3 text-left font-semibold text-[#0F241C] sm:px-4">Dimension</th>
-                  <th className="px-3 py-3 text-left font-semibold text-[#0F241C] sm:px-4">Home Office CPIN</th>
-                  <th className="px-3 py-3 text-left font-semibold text-[#0F241C] sm:px-4">Independent Expert Report</th>
+                <tr className="border-b border-[#C9C4BA] bg-[#E8EDF2]">
+                  <th className="px-3 py-3 text-left font-semibold text-[#191B22] sm:px-4">Dimension</th>
+                  <th className="px-3 py-3 text-left font-semibold text-[#191B22] sm:px-4">Home Office CPIN</th>
+                  <th className="px-3 py-3 text-left font-semibold text-[#191B22] sm:px-4">Independent Expert Report</th>
                 </tr>
               </thead>
               <tbody>
                 {cpinVsExpertTable.map(([dimension, cpin, expert]) => (
-                  <tr key={dimension} className="border-b border-[#B8C4BE]">
-                    <td className="px-3 py-3 font-medium text-[#0F241C] sm:px-4">{dimension}</td>
-                    <td className="px-3 py-3 text-[#33403A] sm:px-4">{cpin}</td>
-                    <td className="px-3 py-3 text-[#33403A] sm:px-4">{expert}</td>
+                  <tr key={dimension} className="border-b border-[#C9C4BA]">
+                    <td className="px-3 py-3 font-medium text-[#191B22] sm:px-4">{dimension}</td>
+                    <td className="px-3 py-3 text-[#3A4148] sm:px-4">{cpin}</td>
+                    <td className="px-3 py-3 text-[#3A4148] sm:px-4">{expert}</td>
                   </tr>
                 ))}
               </tbody>
@@ -114,36 +114,36 @@ export default function CpinCountryGuidancePage() {
           </ResponsiveTableWrap>
         </div>
 
-        <h2 className="mt-10 text-xl font-bold text-[#0F241C]">Country-Specific Guidance Resources</h2>
-        <p className="mt-4 text-[#33403A] leading-relaxed">
+        <h2 className="mt-10 text-xl font-bold text-[#191B22]">Country-Specific Guidance Resources</h2>
+        <p className="mt-4 text-[#3A4148] leading-relaxed">
           Country-specific Country Guidance and CPIN analysis is maintained on dedicated network sites. Do not
           duplicate deep country content here — route to the appropriate specialist:
         </p>
-        <ul className="mt-4 space-y-2 text-[#33403A]">
+        <ul className="mt-4 space-y-2 text-[#3A4148]">
           <li>
-            <a href="https://www.somaliaexpert.com/moj-country-guidance" target="_blank" rel="noopener noreferrer" className="text-[#2B7A78] hover:underline">
+            <a href="https://www.somaliaexpert.com/moj-country-guidance" target="_blank" rel="noopener noreferrer" className="text-[#0B6E99] hover:underline">
               Somalia MOJ Country Guidance
             </a>{" "}
             — Somalia Expert
           </li>
           <li>
-            <a href="https://www.pakistancountryexpert.com/cpin-country-guidance" target="_blank" rel="noopener noreferrer" className="text-[#2B7A78] hover:underline">
+            <a href="https://www.pakistancountryexpert.com/cpin-country-guidance" target="_blank" rel="noopener noreferrer" className="text-[#0B6E99] hover:underline">
               Pakistan CPIN & MN Country Guidance
             </a>{" "}
             — Pakistan Country Expert
           </li>
           <li>
-            <a href="https://www.nigeriaexpert.com/cpin-country-guidance" target="_blank" rel="noopener noreferrer" className="text-[#2B7A78] hover:underline">
+            <a href="https://www.nigeriaexpert.com/cpin-country-guidance" target="_blank" rel="noopener noreferrer" className="text-[#0B6E99] hover:underline">
               Nigeria CPIN & Country Guidance
             </a>{" "}
             — Nigeria Expert
           </li>
         </ul>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-          <Link href="/guides/cpin-vs-expert-report-guide" className="inline-flex min-h-[44px] items-center font-semibold text-[#2B7A78] hover:underline">
+          <Link href="/guides/cpin-vs-expert-report-guide" className="inline-flex min-h-[44px] items-center font-semibold text-[#0B6E99] hover:underline">
             CPIN vs Independent Expert Report guide
           </Link>
-          <Link href="/expertise-areas/cpin-challenge-reports" className="inline-flex min-h-[44px] items-center font-semibold text-[#2B7A78] hover:underline">
+          <Link href="/expertise-areas/cpin-challenge-reports" className="inline-flex min-h-[44px] items-center font-semibold text-[#0B6E99] hover:underline">
             CPIN challenge expertise
           </Link>
         </div>

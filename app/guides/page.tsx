@@ -31,7 +31,7 @@ export default function GuidesPage() {
             href: `/guides/${g.slug}`,
           }))}
         />
-        <Link href="/expert-independence-framework" className="mt-8 inline-flex min-h-[44px] items-center font-semibold text-[#2B7A78] hover:underline">
+        <Link href="/expert-independence-framework" className="mt-8 inline-flex min-h-[44px] items-center font-semibold text-[#0B6E99] hover:underline">
           Expert Independence Framework (pillar guide)
         </Link>
       </PageShell>

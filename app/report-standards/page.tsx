@@ -53,8 +53,8 @@ export default function ReportStandardsPage() {
         breadcrumbs={crumbs}
       >
         <HubPageLinks />
-        <h2 className="text-xl font-bold text-[#0F241C]">Independence-Focused Quality Checklist</h2>
-        <p className="mt-4 text-[#33403A] leading-relaxed">
+        <h2 className="text-xl font-bold text-[#191B22]">Independence-Focused Quality Checklist</h2>
+        <p className="mt-4 text-[#3A4148] leading-relaxed">
           Independent country expert reports for UK immigration tribunals must meet Practice Direction 2024 structure,
           Adam Pipe 2025 assumed-facts requirements, and CPR Part 35 independence standards. Use this checklist when
           reviewing draft reports or instructing experts.
@@ -63,16 +63,16 @@ export default function ReportStandardsPage() {
           <ResponsiveTableWrap label="Swipe to view report standards checklist">
             <table className="w-full min-w-[480px] border-collapse text-sm">
               <thead>
-                <tr className="border-b border-[#B8C4BE] bg-[#E7ECE8]">
-                  <th className="px-3 py-3 text-left font-semibold text-[#0F241C] sm:px-4">Standard</th>
-                  <th className="px-3 py-3 text-left font-semibold text-[#0F241C] sm:px-4">Requirement</th>
+                <tr className="border-b border-[#C9C4BA] bg-[#E8EDF2]">
+                  <th className="px-3 py-3 text-left font-semibold text-[#191B22] sm:px-4">Standard</th>
+                  <th className="px-3 py-3 text-left font-semibold text-[#191B22] sm:px-4">Requirement</th>
                 </tr>
               </thead>
               <tbody>
                 {checklistTable.map(([standard, requirement]) => (
-                  <tr key={standard} className="border-b border-[#B8C4BE]">
-                    <td className="px-3 py-3 font-medium text-[#0F241C] sm:px-4">{standard}</td>
-                    <td className="px-3 py-3 text-[#33403A] sm:px-4">{requirement}</td>
+                  <tr key={standard} className="border-b border-[#C9C4BA]">
+                    <td className="px-3 py-3 font-medium text-[#191B22] sm:px-4">{standard}</td>
+                    <td className="px-3 py-3 text-[#3A4148] sm:px-4">{requirement}</td>
                   </tr>
                 ))}
               </tbody>
@@ -80,23 +80,23 @@ export default function ReportStandardsPage() {
           </ResponsiveTableWrap>
         </div>
 
-        <h2 className="mt-10 text-xl font-bold text-[#0F241C]">Practice Direction 2024 Structure</h2>
-        <p className="mt-4 text-[#33403A] leading-relaxed">
+        <h2 className="mt-10 text-xl font-bold text-[#191B22]">Practice Direction 2024 Structure</h2>
+        <p className="mt-4 text-[#3A4148] leading-relaxed">
           Immigration Tribunal Practice Direction 2024 mandates expert report structure for all country expert
           evidence. Reports must include: the expert&apos;s qualifications and relevant experience; the substance
           of all material instructions; the expert&apos;s opinion with reasons; a statement of truth; a declaration
           of compliance with the duty to the tribunal; and identification of all sources relied upon.
         </p>
-        <h2 className="mt-8 text-xl font-bold text-[#0F241C]">Adam Pipe 2025 Requirements</h2>
-        <p className="mt-4 text-[#33403A] leading-relaxed">
+        <h2 className="mt-8 text-xl font-bold text-[#191B22]">Adam Pipe 2025 Requirements</h2>
+        <p className="mt-4 text-[#3A4148] leading-relaxed">
           The October 2025 guidance requires clear distinction between assumed facts and independent expert opinion.
           Experts must cite dated primary sources, state limitations and assumptions explicitly, and avoid advocacy
           language. Reports where conclusions follow inexorably from assumed facts without independent verification
           are identified as non-compliant.
         </p>
-        <p className="mt-6 text-[#33403A]">
+        <p className="mt-6 text-[#3A4148]">
           For the complete independence framework, see{" "}
-          <Link href="/expert-independence-framework" className="font-semibold text-[#2B7A78] hover:underline">
+          <Link href="/expert-independence-framework" className="font-semibold text-[#0B6E99] hover:underline">
             Expert Independence Framework
           </Link>
           . For report methodology standards across the network, visit{" "}
@@ -104,7 +104,7 @@ export default function ReportStandardsPage() {
             href="https://www.immigrationexpertreports.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-semibold text-[#2B7A78] hover:underline"
+            className="font-semibold text-[#0B6E99] hover:underline"
           >
             Immigration Expert Reports
           </a>

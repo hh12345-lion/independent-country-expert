@@ -34,7 +34,7 @@ export const resourcesNavLinks: NavLink[] = [
   { label: "Glossary", href: "/glossary" },
   { label: "Network", href: "/network" },
   { label: "Qualifications", href: "/qualifications" },
-  { label: "How to Instruct", href: "/how-to-instruct" },
+  { label: "How we route a case", href: "/how-to-instruct" },
 ];
 
 export const mobileNavGroups = [

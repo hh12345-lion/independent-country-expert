@@ -14,7 +14,7 @@ const HUB_LINKS = {
   network: { label: "Network Directory", href: "/network" },
   cpin: { label: "CPIN & Country Guidance", href: "/cpin-country-guidance" },
   reportStandards: { label: "Report Standards", href: "/report-standards" },
-  howToInstruct: { label: "How to Instruct", href: "/how-to-instruct" },
+  howToInstruct: { label: "How we route a case", href: "/how-to-instruct" },
   contact: { label: "Contact", href: "/contact" },
   countries: { label: "All Countries", href: "/countries" },
 } as const;

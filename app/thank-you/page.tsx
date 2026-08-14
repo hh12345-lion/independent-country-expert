@@ -12,17 +12,17 @@ export const metadata = createMetadata({
 export default function ThankYouPage() {
   return (
     <>
-      <section className="bg-[#0F241C] py-16 md:py-24">
+      <section className="bg-[#191B22] py-16 md:py-24">
         <div className="mx-auto max-w-2xl px-4 text-center sm:px-6">
           <div
-            className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#2B7A78]/20"
+            className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#0B6E99]/20"
             aria-hidden="true"
           >
-            <svg className="h-8 w-8 text-[#2B7A78]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="h-8 w-8 text-[#0B6E99]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <h1 className="font-display mt-6 text-3xl tracking-tight text-[#E7ECE8] sm:text-4xl">Thank you</h1>
+          <h1 className="font-display mt-6 text-3xl tracking-tight text-[#E8EDF2] sm:text-4xl">Thank you</h1>
           <p className="mt-4 text-lg text-white/80">
             Your instruction request has been received. We will respond within one business day with routing to
             the appropriate jurisdiction-specific expert.
@@ -30,7 +30,7 @@ export default function ThankYouPage() {
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
               href="/"
-              className="inline-flex min-h-[44px] min-w-[200px] items-center justify-center rounded-[8px] bg-[#2B7A78] px-8 py-3 font-semibold text-white transition hover:bg-[#236663]"
+              className="inline-flex min-h-[44px] min-w-[200px] items-center justify-center rounded-[8px] bg-[#0B6E99] px-8 py-3 font-semibold text-white transition hover:bg-[#085578]"
             >
               Return to Homepage
             </Link>
@@ -44,9 +44,9 @@ export default function ThankYouPage() {
         </div>
       </section>
 
-      <section className="bg-[#E7ECE8] py-12">
-        <div className="mx-auto max-w-2xl px-4 text-center text-[#33403A] sm:px-6">
-          <h2 className="text-lg font-semibold text-[#0F241C]">What happens next?</h2>
+      <section className="bg-[#E8EDF2] py-12">
+        <div className="mx-auto max-w-2xl px-4 text-center text-[#3A4148] sm:px-6">
+          <h2 className="text-lg font-semibold text-[#191B22]">What happens next?</h2>
           <ul className="mt-4 space-y-3 text-left text-sm leading-relaxed">
             <li>We review your case details and identify the right jurisdiction-specific expert in our network.</li>
             <li>You receive a response within one business day with proposed scope, timeline, and fee estimate.</li>
@@ -54,9 +54,9 @@ export default function ThankYouPage() {
           </ul>
           <Link
             href="/how-to-instruct"
-            className="mt-6 inline-flex min-h-[44px] items-center font-semibold text-[#2B7A78] hover:underline"
+            className="mt-6 inline-flex min-h-[44px] items-center font-semibold text-[#0B6E99] hover:underline"
           >
-            How to instruct an independent country expert
+            How we route a case
           </Link>
         </div>
       </section>
