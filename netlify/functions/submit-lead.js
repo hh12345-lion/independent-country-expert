@@ -8,6 +8,15 @@
  */
 const BRAND_NAME = "Independent Country Expert";
 
+
+function getSiteDomain() {
+  const raw = process.env.NEXT_PUBLIC_SITE_URL || "https://independentcountryexpert.com";
+  try {
+    return new URL(raw).hostname.replace(/^www\./, "");
+  } catch {
+    return "independentcountryexpert.com";
+  }
+}
 const SHEET_HEADERS = [
   "Timestamp",
   "Brand name",
@@ -163,6 +172,7 @@ function buildOutboundWebhook(lead) {
     Email: lead.email,
     "Phone Number": lead.phone,
     "Brand name": BRAND_NAME,
+    domain: getSiteDomain(),
   };
 }
 
