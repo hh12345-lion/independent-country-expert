@@ -24,6 +24,12 @@ export function Footer() {
           <Link href="/contact" className="inline-flex min-h-[44px] items-center hover:text-[#0B6E99]">
             Route a case
           </Link>
+          <Link
+            href="/what-is-an-independent-country-expert"
+            className="inline-flex min-h-[44px] items-center hover:text-[#0B6E99]"
+          >
+            What is an ICE?
+          </Link>
           <Link href="/network" className="inline-flex min-h-[44px] items-center hover:text-[#0B6E99]">
             Network
           </Link>

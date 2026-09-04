@@ -27,6 +27,7 @@ export const caseTypesNavLinks: NavLink[] = caseTypes.map((c) => ({
 }));
 
 export const resourcesNavLinks: NavLink[] = [
+  { label: "What is an independent country expert?", href: "/what-is-an-independent-country-expert" },
   { label: "Expert Independence Framework", href: "/expert-independence-framework" },
   { label: "Report Standards", href: "/report-standards" },
   { label: "CPIN & Country Guidance", href: "/cpin-country-guidance" },
