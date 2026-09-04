@@ -4,4 +4,4 @@ Allow: /
 Disallow: /thank-you
 Disallow: /api/
 
-Sitemap: https://www.independentcountryexpert.com/sitemap.xml
+Sitemap: https://independentcountryexpert.com/sitemap.xml
