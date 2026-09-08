@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { SITE_EMAIL } from "@/lib/constants";
 import { postSubmitLead } from "@/lib/submit-lead";
+import { submitNetlifyForm } from "@/lib/submitNetlifyForm";
 
 const inputClass =
   "w-full min-w-0 border-0 border-b border-[#C9C4BA] bg-transparent px-0 py-3 text-base text-[#3A4148] placeholder:text-[#C9C4BA] focus:border-[#0B6E99] focus:outline-none focus:ring-0 min-h-[44px]";
@@ -33,12 +34,37 @@ export function ContactForm() {
       summary: String(data.get("summary") ?? "").trim(),
     });
 
-    if (ok) router.push("/thank-you");
-    else setStatus("error");
+    if (ok) {
+      try {
+        await submitNetlifyForm("contact", {
+          name: fullName,
+          email,
+          phone,
+          law_firm: String(data.get("law_firm") ?? "").trim(),
+          summary: String(data.get("summary") ?? "").trim(),
+          deadline: String(data.get("deadline") ?? "").trim(),
+        });
+      } catch {
+        // Lead API already stored the enquiry; don't block the visitor.
+      }
+      router.push("/thank-you");
+    } else setStatus("error");
   }
 
   return (
-    <form onSubmit={handleSubmit} className="min-w-0 max-w-lg space-y-6">
+    <form
+      name="contact"
+      method="POST"
+      action="/__forms.html"
+      onSubmit={handleSubmit}
+      className="min-w-0 max-w-lg space-y-6"
+    >
+      <input type="hidden" name="form-name" value="contact" />
+      <p className="hidden" aria-hidden="true">
+        <label>
+          Do not fill this out: <input name="bot-field" tabIndex={-1} autoComplete="off" />
+        </label>
+      </p>
       <div className="min-w-0">
         <label className={labelClass} htmlFor="name">
           Name *
