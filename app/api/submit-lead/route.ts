@@ -74,6 +74,17 @@ export async function POST(request: Request) {
     funding: sanitize(body.funding ?? ""),
     deadline: body.deadline ?? "",
     summary: sanitize(body.summary ?? ""),
+    message: sanitize(
+      body.message ??
+        (body as { Message?: string }).Message ??
+        body.summary ??
+        (body as { description?: string }).description ??
+        (body as { enquiry?: string }).enquiry ??
+        (body as { details?: string }).details ??
+        (body as { notes?: string }).notes ??
+        (body as { matter?: string }).matter ??
+        ""
+    ),
   };
 
   if (sheetsOk) {
@@ -84,7 +95,12 @@ export async function POST(request: Request) {
   }
 
   if (webhookUrl) {
-    const outbound = buildLeadWebhookPayload({ fullName, email, phone });
+    const outbound = buildLeadWebhookPayload({
+      fullName,
+      email,
+      phone,
+      message: lead.message,
+    });
     try {
       const res = await fetch(webhookUrl, {
         method: "POST",
