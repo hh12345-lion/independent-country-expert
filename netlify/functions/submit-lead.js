@@ -62,6 +62,7 @@ function sanitize(str) {
     .trim();
 }
 
+/** Map site-specific free-text field names to universal `message`. */
 function resolveLeadMessage(body) {
   if (!body || typeof body !== "object") return "";
   const keys = [
