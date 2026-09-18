@@ -62,6 +62,31 @@ function sanitize(str) {
     .trim();
 }
 
+function resolveLeadMessage(body) {
+  if (!body || typeof body !== "object") return "";
+  const keys = [
+    "message",
+    "Message",
+    "description",
+    "enquiry",
+    "details",
+    "summary",
+    "notes",
+    "matter",
+    "caseSummary",
+    "additionalInfo",
+    "additional_info",
+    "caseDetails",
+    "enquiryDetails",
+  ];
+  for (const key of keys) {
+    if (body[key] != null && String(body[key]).trim()) {
+      return String(body[key]).trim();
+    }
+  }
+  return "";
+}
+
 /**
  * Lead_notification_setup.md — API body must include fullName, email, phone
  * (phone may be an empty string). Extra fields are kept for Google Sheets.
@@ -93,6 +118,8 @@ function parseBody(json) {
     return { error: "Invalid email address", status: 400 };
   }
 
+  const message = resolveLeadMessage(json);
+
   return {
     ok: {
       fullName,
@@ -104,7 +131,8 @@ function parseBody(json) {
       caseType: sanitize(json.caseType),
       funding: sanitize(json.funding),
       deadline: sanitize(json.deadline),
-      summary: sanitize(json.summary),
+      summary: sanitize(json.summary) || message,
+      message,
     },
   };
 }
@@ -165,7 +193,7 @@ async function appendToSheet(lead) {
   return response.data.updates?.updatedRange;
 }
 
-/** Build the exact four-key payload for n8n / Lead_notification_url */
+/** Build webhook payload for n8n / Lead_notification_url */
 function buildOutboundWebhook(lead) {
   return {
     "Full Name": lead.fullName,
@@ -173,6 +201,7 @@ function buildOutboundWebhook(lead) {
     "Phone Number": lead.phone,
     "Brand name": BRAND_NAME,
     domain: getSiteDomain(),
+    message: lead.message ?? "",
   };
 }
 

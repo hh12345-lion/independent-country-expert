@@ -14,6 +14,7 @@ export type SubmitLeadInput = {
   fullName: string;
   email: string;
   phone: string;
+  message?: string;
 };
 
 /** Extra fields stored in Google Sheets when configured */
@@ -29,7 +30,6 @@ export type SubmitLeadPayload = SubmitLeadInput & {
 
 /**
  * Outbound webhook JSON for Lead_notification_url / n8n.
- * Only these four keys — do not add fields without updating the webhook consumer.
  */
 export function buildLeadWebhookPayload(input: SubmitLeadInput) {
   return {
@@ -38,6 +38,7 @@ export function buildLeadWebhookPayload(input: SubmitLeadInput) {
     "Phone Number": input.phone.trim(),
     "Brand name": LEAD_BRAND_NAME,
     domain: getSiteDomain(),
+    message: input.message ?? "",
   };
 }
 
@@ -70,6 +71,7 @@ export async function postSubmitLead(payload: SubmitLeadPayload): Promise<boolea
         funding: payload.funding,
         deadline: payload.deadline,
         summary: payload.summary,
+        message: payload.message ?? payload.summary ?? "",
       }),
     });
     return res.ok;
