@@ -54,9 +54,9 @@ export function organizationSchema() {
     url: SITE_URL,
     email: SITE_EMAIL,
     description:
-      "Independent country expert witness instruction routing for UK immigration and asylum tribunals only.",
+      "Independent country expert witness instruction routing for immigration and asylum tribunals.",
     address: { "@type": "PostalAddress", addressCountry: "GB" },
-    areaServed: { "@type": "Country", name: "United Kingdom" },
+    areaServed: "Worldwide",
     sameAs: NETWORK_SITES,
   };
 }
@@ -79,11 +79,10 @@ export function professionalServiceSchema() {
     url: SITE_URL,
     serviceType: "Independent Country Expert Witness",
     provider: { "@id": `${SITE_URL}/#organization` },
-    areaServed: { "@type": "Country", name: "United Kingdom" },
+    areaServed: "Worldwide",
     audience: {
       "@type": "Audience",
-      audienceType: "UK immigration solicitors and Legal Aid practitioners",
-      geographicArea: { "@type": "Country", name: "United Kingdom" },
+      audienceType: "Immigration solicitors and Legal Aid practitioners",
     },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
@@ -110,7 +109,7 @@ export function websiteSchema() {
     "@id": `${SITE_URL}/#website`,
     name: "Independent Country Expert",
     url: SITE_URL,
-    inLanguage: "en-GB",
+    inLanguage: "en",
     publisher: { "@id": `${SITE_URL}/#organization` },
     potentialAction: {
       "@type": "SearchAction",

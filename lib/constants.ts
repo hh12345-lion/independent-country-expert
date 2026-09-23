@@ -25,10 +25,11 @@ export function getPublicSiteUrl(): string {
 export const SITE_URL = getPublicSiteUrl();
 export const SITE_NAME = "Independent Country Expert";
 export const SITE_EMAIL = "cases@independentcountryexpert.com";
-export const SITE_REGION = "United Kingdom";
-/** Sitewide copy: service is UK tribunals only */
+/** Soft geo — avoid stacking marketplace country names in chrome. */
+export const SITE_REGION = "Worldwide";
+/** Sitewide copy: tribunal routing without over-stacking jurisdiction geography */
 export const SITE_REGION_NOTICE =
-  "UK immigration & asylum tribunals only — for solicitors and Legal Aid practitioners in England, Wales, Scotland, and Northern Ireland.";
+  "Country expert routing for immigration and asylum tribunal instructions — for solicitors and Legal Aid practitioners.";
 export const LINKEDIN_URL =
   "https://www.linkedin.com/company/independent-country-expert";
 

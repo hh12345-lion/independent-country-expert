@@ -8,6 +8,8 @@ import { ConsentDefaultsScript } from "@/components/cookies/ConsentDefaultsScrip
 import { SITE_URL } from "@/lib/constants";
 import "./globals.css";
 
+export const dynamic = "force-dynamic";
+
 const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-outfit",
@@ -31,11 +33,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default:
-      "Independent Country Expert UK | Expert Witness Reports for Asylum & Immigration Tribunals",
+      "Independent Country Expert | Expert Witness Reports for Asylum & Immigration Tribunals",
     template: "%s | Independent Country Expert",
   },
   description:
-    "Independent country expert witness reports for UK immigration and asylum tribunals only. Serving UK solicitors and Legal Aid practitioners — CPR Part 35, Practice Direction 2024, state protection, internal relocation, and CPIN challenge.",
+    "Independent country expert witness reports for immigration and asylum tribunals. Serving solicitors and Legal Aid practitioners — CPR Part 35, Practice Direction 2024, state protection, internal relocation, and CPIN challenge.",
   verification: {
     google: process.env.GOOGLE_SITE_VERIFICATION,
     other: process.env.BING_SITE_VERIFICATION
@@ -44,8 +46,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     languages: {
-      "en-GB": SITE_URL,
-      "en-US": SITE_URL,
+      en: SITE_URL,
       "x-default": SITE_URL,
     },
   },
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en-GB" className={`${outfit.variable} ${zilla.variable} h-full`}>
+    <html lang="en" className={`${outfit.variable} ${zilla.variable} h-full`}>
       <body className="flex min-h-full flex-col font-sans antialiased">
         <ConsentDefaultsScript />
         <CookieConsentProvider>

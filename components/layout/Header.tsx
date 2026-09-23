@@ -35,7 +35,7 @@ export function Header() {
       <div className="bg-[#F7F4EF] px-4 pt-5 pb-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl text-center">
           <p className="text-[10px] font-medium uppercase tracking-[0.28em] text-[#0B6E99]">
-            United Kingdom · First-tier &amp; Upper Tribunal
+            Independent evidence · tribunal routing
           </p>
           <Link href="/" className="mt-2 inline-flex flex-col items-center gap-2">
             <FolioMark className="h-7 w-7 text-[#191B22]" />

@@ -141,3 +141,59 @@ svg {
 #mobile-nav-toggle:checked ~ .header-bar .menu-label-close {
   display: inline;
 }
+
+/* Blog article body */
+.blog-prose h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-zilla), "Palatino Linotype", Palatino, serif;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  color: #191b22;
+}
+
+.blog-prose h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-zilla), "Palatino Linotype", Palatino, serif;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  color: #191b22;
+}
+
+.blog-prose p {
+  margin-top: 1rem;
+  line-height: 1.7;
+  color: #3a4148;
+}
+
+.blog-prose ul,
+.blog-prose ol {
+  margin-top: 1rem;
+  padding-left: 1.25rem;
+  color: #3a4148;
+}
+
+.blog-prose li {
+  margin-top: 0.4rem;
+  line-height: 1.65;
+}
+
+.blog-prose ul {
+  list-style: disc;
+}
+
+.blog-prose ol {
+  list-style: decimal;
+}
+
+.blog-prose a {
+  color: #0b6e99;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.blog-prose strong {
+  font-weight: 600;
+  color: #191b22;
+}

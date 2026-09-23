@@ -32,6 +32,7 @@ export const resourcesNavLinks: NavLink[] = [
   { label: "Report Standards", href: "/report-standards" },
   { label: "CPIN & Country Guidance", href: "/cpin-country-guidance" },
   { label: "Guides", href: "/guides" },
+  { label: "Blog", href: "/blog" },
   { label: "Glossary", href: "/glossary" },
   { label: "Network", href: "/network" },
   { label: "Qualifications", href: "/qualifications" },

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function CTASection({
   title = "Need a specialist for this jurisdiction?",
-  description = "Send a short brief. We route to an independent country expert — UK tribunals only. Reply within one business day.",
+  description = "Send a short brief. We route to an independent country expert. Reply within one business day.",
 }: {
   title?: string;
   description?: string;

@@ -32,6 +32,7 @@ export function ContactForm() {
       organisation: String(data.get("law_firm") ?? "").trim(),
       deadline: String(data.get("deadline") ?? "").trim(),
       summary: String(data.get("summary") ?? "").trim(),
+      message: String(data.get("summary") ?? "").trim(),
     });
 
     if (ok) {

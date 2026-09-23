@@ -7,7 +7,7 @@ export function UkRegionBar() {
       role="note"
       aria-label="Service region"
     >
-      <span className="font-medium text-[#191B22]">UK only.</span> {SITE_REGION_NOTICE}
+      {SITE_REGION_NOTICE}
     </div>
   );
 }

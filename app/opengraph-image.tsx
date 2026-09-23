@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Independent Country Expert — UK Immigration Tribunal Expert Witness Services";
+export const alt = "Independent Country Expert — Immigration Tribunal Expert Witness Services";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -30,7 +30,7 @@ export default function OpenGraphImage() {
             color: "#3D8FB5",
           }}
         >
-          UK tribunals only
+          Worldwide · tribunal routing
         </div>
         <div
           style={{
@@ -56,7 +56,7 @@ export default function OpenGraphImage() {
             lineHeight: 1.35,
           }}
         >
-          Independent country evidence for UK immigration and asylum tribunals
+          Independent country evidence for immigration and asylum tribunals
         </div>
       </div>
     ),

@@ -4,6 +4,7 @@ import { countries } from "../../data/countries";
 import { regions } from "../../data/regions";
 import { caseTypes } from "../../data/case-types";
 import { guides } from "../../data/guides";
+import { getBlogSlugs } from "../blog";
 
 export type PublicUrlEntry = {
   path: string;
@@ -25,6 +26,7 @@ export const APP_STATIC_PATHS: PublicUrlEntry[] = [
   { path: "/qualifications", priority: 0.88, changefreq: "monthly" },
   { path: "/how-to-instruct", priority: 0.88, changefreq: "monthly" },
   { path: "/guides", priority: 0.85, changefreq: "monthly" },
+  { path: "/blog", priority: 0.85, changefreq: "weekly" },
   { path: "/regions", priority: 0.91, changefreq: "monthly" },
   { path: "/glossary", priority: 0.75, changefreq: "monthly" },
 ];
@@ -58,6 +60,11 @@ function dynamicEntries(): PublicUrlEntry[] {
     ...guides.map((g) => ({
       path: `/guides/${g.slug}`,
       priority: 0.82,
+      changefreq: "monthly" as const,
+    })),
+    ...getBlogSlugs().map((slug) => ({
+      path: `/blog/${slug}`,
+      priority: 0.8,
       changefreq: "monthly" as const,
     })),
   ];

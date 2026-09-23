@@ -34,13 +34,13 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(16rem,0.8fr)] lg:gap-16 lg:items-start">
           <div>
             <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-[#0B6E99]">
-              Country evidence · UK tribunals
+              Country evidence · tribunal routing
             </p>
             <h1 className="font-display mt-3 text-[clamp(2.25rem,5vw,3.75rem)] leading-[1.12] tracking-tight text-[#191B22]">
               Independent country experts, routed by jurisdiction.
             </h1>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-[#3A4148] sm:text-lg">
-              We connect UK solicitors and Legal Aid practitioners with truly independent country expert
+              We connect solicitors and Legal Aid practitioners with truly independent country expert
               witnesses — CPR Part 35 reports that go beyond Home Office CPIN.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -62,7 +62,7 @@ export default function HomePage() {
           <aside className="border border-[#191B22] bg-[#E8EDF2] p-6">
             <p className="font-display text-sm uppercase tracking-[0.16em] text-[#191B22]">Filed</p>
             <ul className="mt-4 space-y-3 text-sm leading-relaxed text-[#3A4148]">
-              <li>England, Wales, Scotland, Northern Ireland only.</li>
+              <li>Immigration and asylum tribunal instructions.</li>
               <li>First-tier Tribunal and Upper Tribunal asylum &amp; immigration.</li>
               <li>Reply within one business day · Legal Aid compatible.</li>
             </ul>
@@ -88,9 +88,8 @@ export default function HomePage() {
               Tribunals test independence. Generic country notes fail that test.
             </h2>
             <p className="mt-4 leading-relaxed text-[#3A4148]">
-              UK First-tier and Upper Tribunal proceedings need experts who can state sources, date them,
-              separate assumed facts from opinion, and answer the profile before the court — across England,
-              Wales, Scotland, and Northern Ireland only.
+              First-tier and Upper Tribunal proceedings need experts who can state sources, date them,
+              separate assumed facts from opinion, and answer the profile before the court.
             </p>
           </div>
 

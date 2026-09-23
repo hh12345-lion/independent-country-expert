@@ -9,7 +9,7 @@ export function Footer() {
       <div className="mx-auto max-w-xl px-4 py-10 text-center sm:px-6">
         <p className="font-display text-2xl tracking-tight text-[#191B22]">{SITE_NAME}</p>
         <p className="mt-3 text-sm leading-relaxed">
-          Independent country evidence for UK immigration and asylum tribunals. Not a law firm.
+          Independent country evidence for immigration and asylum tribunals. Not a law firm.
         </p>
         <a
           href={`mailto:${SITE_EMAIL}`}
@@ -29,6 +29,9 @@ export function Footer() {
             className="inline-flex min-h-[44px] items-center hover:text-[#0B6E99]"
           >
             What is an ICE?
+          </Link>
+          <Link href="/blog" className="inline-flex min-h-[44px] items-center hover:text-[#0B6E99]">
+            Blog
           </Link>
           <Link href="/network" className="inline-flex min-h-[44px] items-center hover:text-[#0B6E99]">
             Network
