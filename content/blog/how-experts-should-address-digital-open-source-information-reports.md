@@ -1,6 +1,6 @@
 ---
 title: "How Country Experts Should Address Digital Open Source Information in Expert Reports"
-description: "How country experts assess digital open source material in expert reports — source identity, dates, social media, cross-checking, and distinguishing sources from opinion."
+description: "How country experts assess digital open source material in expert reports, source identity, dates, social media, cross-checking, and distinguishing sources from opinion."
 date: "2026-09-23"
 updated: "2026-09-23"
 image: "/images/blog/how-experts-should-address-digital-open-source-information-reports.webp"

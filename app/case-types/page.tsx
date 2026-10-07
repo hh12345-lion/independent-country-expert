@@ -9,7 +9,7 @@ import { caseTypes } from "@/data/case-types";
 export const metadata = createMetadata({
   title: "Country Expert Witness Case Types UK | FTT, UT, Deportation",
   description:
-    "Independent country expert witness evidence for all UK immigration case types — FTT asylum appeals, UT, deportation, fresh claims, CG challenges, and SJE directions.",
+    "Independent country expert witness evidence for all UK immigration case types, FTT asylum appeals, UT, deportation, fresh claims, CG challenges, and SJE directions.",
   path: "/case-types",
 });
 
@@ -31,7 +31,7 @@ export default function CaseTypesPage() {
             href: `/case-types/${c.slug}`,
           }))}
         />
-        <Link href="/how-to-instruct" className="mt-8 inline-flex min-h-[44px] items-center font-semibold text-[#0B6E99] hover:underline">
+        <Link href="/how-to-instruct" className="mt-8 inline-flex min-h-[44px] items-center font-semibold text-[#406383] hover:underline">
           How we route a case
         </Link>
       </PageShell>

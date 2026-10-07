@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { SITE_URL } from "./constants";
 
 const OG_IMAGE_ALT =
-  "Independent Country Expert — Immigration Tribunal Expert Witness Services";
+  "Independent Country Expert | Immigration Tribunal Expert Witness Services";
 
 export const OPEN_GRAPH_IMAGE = {
   url: `${SITE_URL}/opengraph-image`,

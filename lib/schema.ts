@@ -52,6 +52,7 @@ export function organizationSchema() {
     "@id": `${SITE_URL}/#organization`,
     name: "Independent Country Expert",
     url: SITE_URL,
+    logo: `${SITE_URL}/brand/icon-512.png`,
     email: SITE_EMAIL,
     description:
       "Independent country expert witness instruction routing for immigration and asylum tribunals.",

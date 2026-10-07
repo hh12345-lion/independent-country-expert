@@ -1,6 +1,6 @@
 import type { CookieCategory } from "./types";
 
-/** localStorage key — bump version suffix to re-prompt after policy changes */
+/** localStorage key, bump version suffix to re-prompt after policy changes */
 export const CONSENT_STORAGE_KEY = "ice_cookie_consent_v1";
 
 /** Increment to invalidate stored consent and show banner again */

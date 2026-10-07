@@ -12,7 +12,7 @@ export const services: Service[] = [
     title: "Independent Country Condition Reports",
     navLabel: "Country Condition Reports",
     description:
-      "Profile-specific country condition analysis with dated primary sources — security, governance, human rights, and regional variation beyond generic Home Office CPIN summaries.",
+      "Profile-specific country condition analysis with dated primary sources, security, governance, human rights, and regional variation beyond generic Home Office CPIN summaries.",
     expertiseSlug: "country-condition-analysis",
   },
   {
@@ -28,7 +28,7 @@ export const services: Service[] = [
     title: "Internal Relocation Assessment",
     navLabel: "Internal Relocation",
     description:
-      "Viability analysis for internal relocation — reasonable in country, unduly harsh test, economic subsistence, and clan networks at the proposed destination.",
+      "Viability analysis for internal relocation, reasonable in country, unduly harsh test, economic subsistence, and clan networks at the proposed destination.",
     expertiseSlug: "internal-relocation-analysis",
   },
   {
@@ -52,7 +52,7 @@ export const services: Service[] = [
     title: "Return & Deportation Risk Reports",
     navLabel: "Return & Deportation Risk",
     description:
-      "Article 3 ECHR return risk assessment for deportation and removal cases — security, subsistence, diaspora networks, and destitution threshold analysis.",
+      "Article 3 ECHR return risk assessment for deportation and removal cases, security, subsistence, diaspora networks, and destitution threshold analysis.",
     expertiseSlug: "return-deportation-risk",
   },
   {
@@ -60,7 +60,7 @@ export const services: Service[] = [
     title: "Fresh Claim Country Updates",
     navLabel: "Fresh Claim Updates",
     description:
-      "Country condition update reports for fresh claims and further submissions — changed conditions, new CPIN material, and post-decision security developments.",
+      "Country condition update reports for fresh claims and further submissions, changed conditions, new CPIN material, and post-decision security developments.",
     expertiseSlug: "fresh-claim-updates",
   },
   {
@@ -68,7 +68,7 @@ export const services: Service[] = [
     title: "Oral Evidence at Tribunal",
     navLabel: "Oral Evidence",
     description:
-      "FTT and UT hearing attendance — confirming written reports, supplementary oral evidence, cross-examination, and joint expert meetings.",
+      "FTT and UT hearing attendance, confirming written reports, supplementary oral evidence, cross-examination, and joint expert meetings.",
     expertiseSlug: "oral-evidence-tribunal",
   },
 ];

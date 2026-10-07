@@ -24,10 +24,10 @@ export default function CountriesPage() {
         breadcrumbs={crumbs}
       >
         <HubPageLinks />
-        <p className="mb-8 text-[#3A4148] leading-relaxed">
+        <p className="mb-8 text-[#364142] leading-relaxed">
           Each country page provides a brief overview of asylum complexity and key profiles, with a prominent
           outbound link to the dedicated network site for country-deep content. We do not duplicate Somalia MOJ
-          analysis, Pakistan Ahmadi profiles, or other jurisdiction-specific deep content — we route you to the
+          analysis, Pakistan Ahmadi profiles, or other jurisdiction-specific deep content, we route you to the
           right specialist.
         </p>
         <CardGrid
@@ -37,10 +37,10 @@ export default function CountriesPage() {
             href: `/countries/${c.slug}`,
           }))}
         />
-        <Link href="/expert-independence-framework" className="mt-4 inline-flex min-h-[44px] items-center font-semibold text-[#0B6E99] hover:underline">
+        <Link href="/expert-independence-framework" className="mt-4 inline-flex min-h-[44px] items-center font-semibold text-[#406383] hover:underline">
           Expert Independence Framework
         </Link>
-        <Link href="/network" className="mt-8 inline-flex min-h-[44px] items-center font-semibold text-[#0B6E99] hover:underline sm:ml-6">
+        <Link href="/network" className="mt-8 inline-flex min-h-[44px] items-center font-semibold text-[#406383] hover:underline sm:ml-6">
           View full network directory
         </Link>
       </PageShell>

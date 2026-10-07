@@ -7,8 +7,8 @@ import { postSubmitLead } from "@/lib/submit-lead";
 import { submitNetlifyForm } from "@/lib/submitNetlifyForm";
 
 const inputClass =
-  "w-full min-w-0 border-0 border-b border-[#C9C4BA] bg-transparent px-0 py-3 text-base text-[#3A4148] placeholder:text-[#C9C4BA] focus:border-[#0B6E99] focus:outline-none focus:ring-0 min-h-[44px]";
-const labelClass = "mb-1 block text-[11px] font-semibold uppercase tracking-[0.14em] text-[#191B22]";
+  "w-full min-w-0 border-0 border-b border-[#D0CFC9] bg-transparent px-0 py-3 text-base text-[#364142] placeholder:text-[#D0CFC9] focus:border-[#406383] focus:outline-none focus:ring-0 min-h-[44px]";
+const labelClass = "mb-1 block text-[11px] font-semibold uppercase tracking-[0.14em] text-[#171D1E]";
 
 export function ContactForm() {
   const router = useRouter();
@@ -20,7 +20,7 @@ export function ContactForm() {
     const form = e.currentTarget;
     const data = new FormData(form);
 
-    // Lead_notification_setup.md — API requires fullName, email, phone
+    // Lead_notification_setup.md, API requires fullName, email, phone
     const fullName = String(data.get("name") ?? "").trim();
     const email = String(data.get("email") ?? "").trim();
     const phone = String(data.get("phone") ?? "").trim();
@@ -141,7 +141,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="inline-flex min-h-[48px] w-full items-center justify-center bg-[#191B22] px-6 text-[12px] font-semibold uppercase tracking-[0.14em] text-[#E8EDF2] transition-colors hover:bg-[#0B6E99] disabled:opacity-60 sm:w-auto"
+        className="inline-flex min-h-[48px] w-full items-center justify-center bg-[#171D1E] px-6 text-[12px] font-semibold uppercase tracking-[0.14em] text-[#E3E1DC] transition-colors hover:bg-[#406383] disabled:opacity-60 sm:w-auto"
       >
         {status === "loading" ? "Sending…" : "Send brief"}
       </button>

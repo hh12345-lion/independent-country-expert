@@ -1,6 +1,6 @@
 import type { FAQ } from "@/lib/schema";
 
-/** Additional FAQs per expertise area — merged with base faqs on each expertise page */
+/** Additional FAQs per expertise area, merged with base faqs on each expertise page */
 export const expertiseFaqExtra: Record<string, FAQ[]> = {
   "country-condition-analysis": [
     {
@@ -21,7 +21,7 @@ export const expertiseFaqExtra: Record<string, FAQ[]> = {
     {
       question: "Can country experts address regional variation within a country?",
       answer:
-        "Yes — effective country condition analysis must address regional variation. Conditions in Mogadishu differ from Somaliland; Lagos from the Niger Delta; urban centres from rural areas. Generic national summaries are insufficient.",
+        "Yes, effective country condition analysis must address regional variation. Conditions in Mogadishu differ from Somaliland; Lagos from the Niger Delta; urban centres from rural areas. Generic national summaries are insufficient.",
     },
   ],
   "state-protection-assessment": [
@@ -33,7 +33,7 @@ export const expertiseFaqExtra: Record<string, FAQ[]> = {
     {
       question: "How does EUAA actors of protection guidance apply in UK tribunals?",
       answer:
-        "EUAA Country Guidance on actors of protection is persuasive in UK proceedings. Experts assess whether identified protection actors — police, military, clan structures — can realistically protect the specific appellant.",
+        "EUAA Country Guidance on actors of protection is persuasive in UK proceedings. Experts assess whether identified protection actors, police, military, clan structures, can realistically protect the specific appellant.",
     },
     {
       question: "When does state protection fail in expert analysis?",
@@ -50,7 +50,7 @@ export const expertiseFaqExtra: Record<string, FAQ[]> = {
     {
       question: "What is the unduly harsh test for internal relocation?",
       answer:
-        "Relocation must not be unduly harsh for the specific appellant considering personal circumstances — age, health, gender, economic subsistence, and social networks. Experts assess viability, not just geographic distance.",
+        "Relocation must not be unduly harsh for the specific appellant considering personal circumstances, age, health, gender, economic subsistence, and social networks. Experts assess viability, not just geographic distance.",
     },
     {
       question: "When will the Home Office argue internal relocation?",
@@ -65,7 +65,7 @@ export const expertiseFaqExtra: Record<string, FAQ[]> = {
     {
       question: "Can economic conditions make relocation unduly harsh?",
       answer:
-        "Yes — where the appellant cannot subsist economically at the relocation destination without family or clan support, and no viable livelihood exists, experts assess whether relocation would be unduly harsh.",
+        "Yes, where the appellant cannot subsist economically at the relocation destination without family or clan support, and no viable livelihood exists, experts assess whether relocation would be unduly harsh.",
     },
   ],
   "cpin-challenge-reports": [
@@ -77,7 +77,7 @@ export const expertiseFaqExtra: Record<string, FAQ[]> = {
     {
       question: "Can a CPIN challenge report stand alone without a full country report?",
       answer:
-        "Yes — focused CPIN challenge reports rebut specific CPIN findings with dated primary sources. Comprehensive country condition reports may also incorporate CPIN challenge analysis.",
+        "Yes, focused CPIN challenge reports rebut specific CPIN findings with dated primary sources. Comprehensive country condition reports may also incorporate CPIN challenge analysis.",
     },
     {
       question: "What weight do tribunals give expert evidence vs CPIN?",
@@ -126,7 +126,7 @@ export const expertiseFaqExtra: Record<string, FAQ[]> = {
     {
       question: "Do failed asylum seekers face different return risk analysis?",
       answer:
-        "Yes — failed asylum seeker profiles engage destitution, social stigma, and state hostility to returnees. Experts assess conditions specific to failed asylum seekers, not just general country conditions.",
+        "Yes, failed asylum seeker profiles engage destitution, social stigma, and state hostility to returnees. Experts assess conditions specific to failed asylum seekers, not just general country conditions.",
     },
     {
       question: "Should human rights experts be instructed alongside country experts?",
@@ -138,7 +138,7 @@ export const expertiseFaqExtra: Record<string, FAQ[]> = {
     {
       question: "What qualifies as a fresh claim requiring expert evidence?",
       answer:
-        "New or previously unconsidered material that materially affects the risk assessment — security deterioration, new country guidance, changed personal circumstances, or updated CPIN material not addressed in the previous decision.",
+        "New or previously unconsidered material that materially affects the risk assessment, security deterioration, new country guidance, changed personal circumstances, or updated CPIN material not addressed in the previous decision.",
     },
     {
       question: "How do experts document changed country conditions?",
@@ -148,7 +148,7 @@ export const expertiseFaqExtra: Record<string, FAQ[]> = {
     {
       question: "Can an update report reference the previous expert report?",
       answer:
-        "Yes — experts should address the previous decision and any prior expert evidence, explaining what new material exists and why it was not previously considered or is now materially different.",
+        "Yes, experts should address the previous decision and any prior expert evidence, explaining what new material exists and why it was not previously considered or is now materially different.",
     },
     {
       question: "What is the timeline for fresh claim expert reports?",
@@ -165,7 +165,7 @@ export const expertiseFaqExtra: Record<string, FAQ[]> = {
     {
       question: "What happens at a joint expert meeting?",
       answer:
-        "Under Practice Direction 2024, experts meet before hearing to identify agreement and disagreement. Meetings must be genuine — not collusion. Joint statements reflect authentic expert positions.",
+        "Under Practice Direction 2024, experts meet before hearing to identify agreement and disagreement. Meetings must be genuine, not collusion. Joint statements reflect authentic expert positions.",
     },
     {
       question: "Can experts give evidence beyond their written report?",

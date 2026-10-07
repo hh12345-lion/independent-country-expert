@@ -9,7 +9,7 @@ import { guides } from "@/data/guides";
 export const metadata = createMetadata({
   title: "Country Expert Witness Guides for UK Solicitors | 2025–2026",
   description:
-    "Solicitor guides on independent country expert evidence — independence, instruction, CPIN vs expert reports, oral evidence, and Legal Aid fees.",
+    "Solicitor guides on independent country expert evidence, independence, instruction, CPIN vs expert reports, oral evidence, and Legal Aid fees.",
   path: "/guides",
 });
 
@@ -31,7 +31,7 @@ export default function GuidesPage() {
             href: `/guides/${g.slug}`,
           }))}
         />
-        <Link href="/expert-independence-framework" className="mt-8 inline-flex min-h-[44px] items-center font-semibold text-[#0B6E99] hover:underline">
+        <Link href="/expert-independence-framework" className="mt-8 inline-flex min-h-[44px] items-center font-semibold text-[#406383] hover:underline">
           Expert Independence Framework (pillar guide)
         </Link>
       </PageShell>

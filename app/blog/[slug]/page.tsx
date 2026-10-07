@@ -84,7 +84,7 @@ export default async function BlogPostPage({ params }: Props) {
     <>
       <PageJsonLd breadcrumbs={crumbs} extra={articleLd} />
       {post.image ? (
-        <div className="relative mx-auto h-[min(28rem,55vw)] w-full max-w-6xl border-b border-[#C9C4BA]">
+        <div className="relative mx-auto h-[min(28rem,55vw)] w-full max-w-6xl border-b border-[#D0CFC9]">
           <Image
             src={post.image}
             alt={post.imageAlt || post.title}
@@ -98,7 +98,7 @@ export default async function BlogPostPage({ params }: Props) {
 
       <article className="py-12 md:py-16">
         <div className="blog-prose mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-[#0B6E99]">
+          <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-[#406383]">
             <time dateTime={post.updated || post.date}>
               {new Date(post.updated || post.date).toLocaleDateString("en-GB", {
                 day: "numeric",
@@ -109,19 +109,19 @@ export default async function BlogPostPage({ params }: Props) {
             <span className="mx-2">·</span>
             <span className="normal-case tracking-normal">{post.readingTime}</span>
           </p>
-          <h1 className="mt-3 font-display text-3xl leading-tight text-[#191B22] sm:text-4xl">
+          <h1 className="mt-3 font-display text-3xl leading-tight text-[#171D1E] sm:text-4xl">
             {post.title}
           </h1>
-          <p className="mt-4 text-lg text-[#3A4148]">{post.description}</p>
+          <p className="mt-4 text-lg text-[#364142]">{post.description}</p>
 
           <div className="mt-10" dangerouslySetInnerHTML={{ __html: html }} />
 
-          <p className="mt-12 border-t border-[#C9C4BA] pt-8 text-sm">
-            <Link href="/blog" className="font-semibold text-[#0B6E99] hover:underline">
+          <p className="mt-12 border-t border-[#D0CFC9] pt-8 text-sm">
+            <Link href="/blog" className="font-semibold text-[#406383] hover:underline">
               ← Back to the blog
             </Link>
-            <span className="mx-3 text-[#C9C4BA]">·</span>
-            <Link href="/contact" className="font-semibold text-[#0B6E99] hover:underline">
+            <span className="mx-3 text-[#D0CFC9]">·</span>
+            <Link href="/contact" className="font-semibold text-[#406383] hover:underline">
               Route a case
             </Link>
           </p>

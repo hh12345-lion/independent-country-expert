@@ -200,7 +200,7 @@ export function logSheetsError(context: string, error: unknown) {
 }
 
 /**
- * Non-throwing append for form handlers — logs and returns false on failure.
+ * Non-throwing append for form handlers, logs and returns false on failure.
  */
 export async function safeAppendRow(
   values: CellValue[],

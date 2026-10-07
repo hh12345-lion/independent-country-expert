@@ -9,7 +9,7 @@ import {
 import { LEAD_BRAND_NAME, type SubmitLeadPayload } from "@/lib/submit-lead";
 
 /**
- * Row 1 headers for GOOGLE_SHEET_TAB_NAME — keep order in sync with leadRowValues().
+ * Row 1 headers for GOOGLE_SHEET_TAB_NAME, keep order in sync with leadRowValues().
  */
 export const CONTACT_SHEET_HEADERS = [
   "Timestamp",
@@ -56,13 +56,13 @@ async function ensureHeaderRow(): Promise<void> {
 }
 
 /**
- * Append one contact / instruct lead. Never throws — logs errors only.
+ * Append one contact / instruct lead. Never throws, logs errors only.
  */
 export async function appendLeadToSheet(data: SubmitLeadPayload): Promise<boolean> {
   if (!isGoogleSheetsConfigured()) {
     const missing = getGoogleSheetsConfigMissing();
     console.warn(
-      `[contact-sheet] Skipped — missing in env: ${missing.join(", ")}. Restart the server after saving .env.local.`
+      `[contact-sheet] Skipped: missing in env: ${missing.join(", ")}. Restart the server after saving .env.local.`
     );
     return false;
   }

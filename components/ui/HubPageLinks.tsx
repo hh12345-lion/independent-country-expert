@@ -13,12 +13,12 @@ export function HubPageLinks({
   return (
     <nav
       aria-label="Site hubs"
-      className="mb-8 flex flex-col gap-3 border-y border-[#C9C4BA] py-4 sm:flex-row sm:flex-wrap sm:gap-6"
+      className="mb-8 flex flex-col gap-3 border-y border-[#D0CFC9] py-4 sm:flex-row sm:flex-wrap sm:gap-6"
     >
       {showIndependence && (
         <Link
           href="/expert-independence-framework"
-          className="inline-flex min-h-[44px] items-center text-[12px] font-semibold uppercase tracking-[0.12em] text-[#191B22] hover:text-[#0B6E99]"
+          className="inline-flex min-h-[44px] items-center text-[12px] font-semibold uppercase tracking-[0.12em] text-[#171D1E] hover:text-[#406383]"
         >
           Independence framework →
         </Link>
@@ -26,7 +26,7 @@ export function HubPageLinks({
       {showNetwork && (
         <Link
           href="/network"
-          className="inline-flex min-h-[44px] items-center text-[12px] font-semibold uppercase tracking-[0.12em] text-[#191B22] hover:text-[#0B6E99]"
+          className="inline-flex min-h-[44px] items-center text-[12px] font-semibold uppercase tracking-[0.12em] text-[#171D1E] hover:text-[#406383]"
         >
           Network directory →
         </Link>

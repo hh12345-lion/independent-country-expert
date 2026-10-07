@@ -33,7 +33,7 @@ export const caseTypes: CaseType[] = [
       {
         question: "What should a country expert report for the FTT contain?",
         answer:
-          "Reports should address country conditions relevant to the claim, state protection analysis, internal relocation feasibility, consistency with current CPINs, and source citations to dated primary material — with clear distinction between assumed facts and independent opinion.",
+          "Reports should address country conditions relevant to the claim, state protection analysis, internal relocation feasibility, consistency with current CPINs, and source citations to dated primary material, with clear distinction between assumed facts and independent opinion.",
       },
     ],
     relatedExpertise: ["country-condition-analysis", "state-protection-assessment", "cpin-challenge-reports"],
@@ -72,7 +72,7 @@ export const caseTypes: CaseType[] = [
       "Independent country expert for deportation and removal cases. Article 3 ECHR return risk, failed asylum seeker profiles, and destitution threshold analysis.",
     h1: "Independent Country Expert for Deportation & Removal Cases",
     content: [
-      "Deportation and removal cases engage Article 3 and Article 8 ECHR rather than Refugee Convention persecution. Country experts assess conditions the appellant would face on return — security risk, economic subsistence, social networks, and state hostility to returnees.",
+      "Deportation and removal cases engage Article 3 and Article 8 ECHR rather than Refugee Convention persecution. Country experts assess conditions the appellant would face on return, security risk, economic subsistence, social networks, and state hostility to returnees.",
       "Failed asylum seeker return profiles, deportation with criminal convictions, and voluntary return refusals each require distinct analytical frameworks. Country-specific tests apply: the MOJ diaspora test for Somalia; destitution analysis for returnees without family support.",
       "Return risk experts work alongside human rights experts where treaty standards are in dispute. Both must maintain independence under CPR Part 35.",
     ],
@@ -106,7 +106,7 @@ export const caseTypes: CaseType[] = [
       {
         question: "When is expert evidence needed for a fresh claim?",
         answer:
-          "When new or previously unconsidered country conditions materially affect the risk assessment — security deterioration, new country guidance, or updated CPIN material the previous decision did not address.",
+          "When new or previously unconsidered country conditions materially affect the risk assessment, security deterioration, new country guidance, or updated CPIN material the previous decision did not address.",
       },
       {
         question: "How current must sources be for fresh claims?",
@@ -124,7 +124,7 @@ export const caseTypes: CaseType[] = [
       "Independent country expert for country guidance challenges. Highest methodological rigour, oral evidence, and tribunal-wide precedent analysis.",
     h1: "Independent Country Expert for Country Guidance Challenges",
     content: [
-      "Country guidance (CG) cases establish tribunal-wide precedent binding on First-tier Tribunals unless distinguished. Expert evidence in CG challenges requires the highest methodological rigour — dated primary sources, transparent limitations, and analysis that addresses the guidance question directly.",
+      "Country guidance (CG) cases establish tribunal-wide precedent binding on First-tier Tribunals unless distinguished. Expert evidence in CG challenges requires the highest methodological rigour, dated primary sources, transparent limitations, and analysis that addresses the guidance question directly.",
       "CG challenges frequently involve oral evidence and rigorous cross-examination. Experts must be prepared to defend their methodology and conclusions under questioning from multiple parties and the tribunal itself.",
       "Independent Country Expert coordinates CG instructions to senior experts with Upper Tribunal experience and demonstrated independence in previous country guidance proceedings.",
     ],
@@ -150,7 +150,7 @@ export const caseTypes: CaseType[] = [
       "Independent country expert evidence for judicial review proceedings. Country conditions material to JR grounds, expedited instruction, and CPR Part 35 compliance.",
     h1: "Independent Country Expert for Judicial Review Proceedings",
     content: [
-      "Judicial review proceedings may require country expert evidence where country conditions are material to the grounds of challenge — for example, where the Home Office failed to consider relevant country evidence or misapplied country guidance.",
+      "Judicial review proceedings may require country expert evidence where country conditions are material to the grounds of challenge, for example, where the Home Office failed to consider relevant country evidence or misapplied country guidance.",
       "JR expert reports must be prepared to tight deadlines. Independent Country Expert coordinates expedited instructions where JR permission or substantive hearing dates require urgent expert analysis.",
       "Experts in JR proceedings must maintain the same independence standards as tribunal proceedings under CPR Part 35. Reports prepared for JR may subsequently be relied upon in related tribunal proceedings.",
     ],
@@ -158,12 +158,12 @@ export const caseTypes: CaseType[] = [
       {
         question: "When is country expert evidence needed in judicial review?",
         answer:
-          "Where country conditions are material to the JR grounds — for example, failure to consider relevant country evidence, misapplication of country guidance, or reliance on outdated CPIN material.",
+          "Where country conditions are material to the JR grounds, for example, failure to consider relevant country evidence, misapplication of country guidance, or reliance on outdated CPIN material.",
       },
       {
         question: "Can JR expert reports be used in tribunal proceedings?",
         answer:
-          "Yes — reports prepared for JR may subsequently be relied upon in related tribunal proceedings, subject to exchange requirements and tribunal directions.",
+          "Yes, reports prepared for JR may subsequently be relied upon in related tribunal proceedings, subject to exchange requirements and tribunal directions.",
       },
     ],
     relatedExpertise: ["country-condition-analysis", "cpin-challenge-reports"],
@@ -203,14 +203,14 @@ export const caseTypes: CaseType[] = [
     h1: "Independent Country Expert for Single Joint Expert Directions",
     content: [
       "Single Joint Expert (SJE) directions appoint one expert instructed jointly by both parties. The expert owes the same paramount duty to the tribunal under Ikarian Reefer, regardless of joint instruction. Independence must be maintained throughout.",
-      "Joint expert meetings before hearings must be genuine — identifying areas of agreement and disagreement without collusion. Joint statements should reflect authentic expert positions, not negotiated advocacy.",
+      "Joint expert meetings before hearings must be genuine, identifying areas of agreement and disagreement without collusion. Joint statements should reflect authentic expert positions, not negotiated advocacy.",
       "SJE directions are common where identity, linguistic capability, or country conditions are disputed but the tribunal considers a single expert appropriate. Independent Country Expert provides SJE-qualified experts across the network.",
     ],
     faqs: [
       {
         question: "Does a Single Joint Expert owe a duty to both parties?",
         answer:
-          "No — the SJE owes a paramount duty to the tribunal under Ikarian Reefer, regardless of joint instruction. The expert must assist the tribunal, not either party.",
+          "No, the SJE owes a paramount duty to the tribunal under Ikarian Reefer, regardless of joint instruction. The expert must assist the tribunal, not either party.",
       },
       {
         question: "When are SJE directions used for country experts?",

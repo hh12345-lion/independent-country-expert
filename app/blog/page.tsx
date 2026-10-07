@@ -45,24 +45,24 @@ export default function BlogIndexPage() {
         <div className="mb-10 flex flex-wrap gap-3">
           <Link
             href="/contact"
-            className="inline-flex min-h-[44px] items-center justify-center bg-[#191B22] px-6 text-[12px] font-semibold uppercase tracking-[0.14em] text-[#F7F4EF] hover:bg-[#0B6E99]"
+            className="inline-flex min-h-[44px] items-center justify-center bg-[#171D1E] px-6 text-[12px] font-semibold uppercase tracking-[0.14em] text-[#EFECE4] hover:bg-[#406383]"
           >
             Route a case
           </Link>
           <Link
             href="/guides"
-            className="inline-flex min-h-[44px] items-center justify-center border border-[#191B22] px-6 text-[12px] font-semibold uppercase tracking-[0.14em] text-[#191B22] hover:border-[#0B6E99] hover:text-[#0B6E99]"
+            className="inline-flex min-h-[44px] items-center justify-center border border-[#171D1E] px-6 text-[12px] font-semibold uppercase tracking-[0.14em] text-[#171D1E] hover:border-[#406383] hover:text-[#406383]"
           >
             Browse guides
           </Link>
         </div>
 
         {posts.length === 0 ? (
-          <p className="text-[#3A4148]">Articles will appear here shortly.</p>
+          <p className="text-[#364142]">Articles will appear here shortly.</p>
         ) : (
           <ul className="grid gap-8 md:grid-cols-2">
             {posts.map((post) => (
-              <li key={post.slug} className="overflow-hidden border border-[#C9C4BA] bg-[#F7F4EF]">
+              <li key={post.slug} className="overflow-hidden border border-[#D0CFC9] bg-[#EFECE4]">
                 {post.image ? (
                   <Link href={`/blog/${post.slug}`} className="relative block h-52 w-full">
                     <Image
@@ -75,7 +75,7 @@ export default function BlogIndexPage() {
                   </Link>
                 ) : null}
                 <div className="p-6">
-                  <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-[#0B6E99]">
+                  <p className="text-[11px] font-medium uppercase tracking-[0.14em] text-[#406383]">
                     <time dateTime={post.updated || post.date}>
                       {new Date(post.updated || post.date).toLocaleDateString("en-GB", {
                         day: "numeric",
@@ -86,16 +86,16 @@ export default function BlogIndexPage() {
                     <span className="mx-2">·</span>
                     <span className="normal-case tracking-normal">{post.readingTime}</span>
                   </p>
-                  <h2 className="mt-3 font-display text-xl text-[#191B22]">
-                    <Link href={`/blog/${post.slug}`} className="hover:text-[#0B6E99]">
+                  <h2 className="mt-3 font-display text-xl text-[#171D1E]">
+                    <Link href={`/blog/${post.slug}`} className="hover:text-[#406383]">
                       {post.title}
                     </Link>
                   </h2>
-                  <p className="mt-3 text-sm leading-relaxed text-[#3A4148]">{post.description}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-[#364142]">{post.description}</p>
                   <p className="mt-5">
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="text-sm font-semibold text-[#0B6E99] hover:underline"
+                      className="text-sm font-semibold text-[#406383] hover:underline"
                     >
                       Read article →
                     </Link>

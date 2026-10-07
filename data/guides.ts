@@ -17,7 +17,7 @@ export const guides: Guide[] = [
       {
         heading: "The Paramount Duty Under Ikarian Reefer",
         content: [
-          "Under Ikarian Reefer [1993] 2 Lloyd's Rep 68, expert witnesses owe a paramount duty to the tribunal to provide independent, objective evidence — regardless of who instructs or pays them. Country experts must not advocate for the instructing party. This duty is the defining quality of expert evidence in UK immigration tribunals.",
+          "Under Ikarian Reefer [1993] 2 Lloyd's Rep 68, expert witnesses owe a paramount duty to the tribunal to provide independent, objective evidence, regardless of who instructs or pays them. Country experts must not advocate for the instructing party. This duty is the defining quality of expert evidence in UK immigration tribunals.",
           "Solicitors should assess independence before instruction: review previous reports for advocacy language, check whether the expert has only ever been instructed by claimant firms, and evaluate whether the expert's conclusions follow inexorably from assumed facts without independent verification.",
         ],
       },
@@ -31,7 +31,7 @@ export const guides: Guide[] = [
       {
         heading: "Adam Pipe Guidance 2025",
         content: [
-          "The October 2025 guidance by Adam Pipe reinforces that experts must distinguish assumed facts from independent analysis. Reports that read as advocacy — where conclusions follow inexorably from assumed facts without independent verification — damage credibility and may result in reduced tribunal weight.",
+          "The October 2025 guidance by Adam Pipe reinforces that experts must distinguish assumed facts from independent analysis. Reports that read as advocacy, where conclusions follow inexorably from assumed facts without independent verification, damage credibility and may result in reduced tribunal weight.",
           "Experts must state limitations clearly, cite dated primary sources, and avoid language that suggests they are advancing the client's case rather than assisting the tribunal.",
         ],
       },
@@ -75,8 +75,8 @@ export const guides: Guide[] = [
       {
         heading: "Network Routing",
         content: [
-          "Independent Country Expert coordinates instruction across the network — routing Somalia cases to Somalia Expert, Nigeria to Nigeria Expert, Pakistan to Pakistan Country Expert, and multi-country African or South Asian cases to the appropriate regional specialist.",
-          "Submit your case details via the contact form specifying country/jurisdiction and expertise needed. We respond within one business day with proposed expert, scope, and timeline.",
+          "Independent Country Expert coordinates instruction across the network, routing Somalia cases to Somalia Expert, Nigeria to Nigeria Expert, Pakistan to Pakistan Country Expert, and multi-country African or South Asian cases to the appropriate regional specialist.",
+          "Submit your case details via the contact form specifying country/jurisdiction and expertise needed. We respond with proposed expert, scope, and timeline.",
         ],
       },
     ],
@@ -98,7 +98,7 @@ export const guides: Guide[] = [
       {
         heading: "What Independent Experts Add",
         content: [
-          "Independent country experts address the individual appellant's profile with dated primary sources and expert analysis. They assess regional variation, profile-specific risk, state protection for the appellant's circumstances, and internal relocation viability — going beyond CPIN generalisations.",
+          "Independent country experts address the individual appellant's profile with dated primary sources and expert analysis. They assess regional variation, profile-specific risk, state protection for the appellant's circumstances, and internal relocation viability, going beyond CPIN generalisations.",
           "Under Ikarian Reefer, experts owe a paramount duty to the tribunal. Their analysis is independent of Home Office policy positions and must be evidence-led rather than advocacy-driven.",
         ],
       },
@@ -112,7 +112,7 @@ export const guides: Guide[] = [
       {
         heading: "Tribunal Weight",
         content: [
-          "Tribunals weigh all evidence. Independent expert reports demonstrating methodology, dated sources, and profile-specific analysis frequently carry significant weight — particularly where CPIN material is generic or outdated. The expert's independence and oral evidence performance also affect weight.",
+          "Tribunals weigh all evidence. Independent expert reports demonstrating methodology, dated sources, and profile-specific analysis frequently carry significant weight, particularly where CPIN material is generic or outdated. The expert's independence and oral evidence performance also affect weight.",
         ],
       },
     ],
@@ -134,7 +134,7 @@ export const guides: Guide[] = [
       {
         heading: "Profile Expertise",
         content: [
-          "Beyond country knowledge, assess whether the expert has experience with the appellant's specific profile — LGBTQ+ persecution, clan analysis, political opposition, FGM, trafficking, or linguistic identity. Profile expertise affects report quality and tribunal acceptance.",
+          "Beyond country knowledge, assess whether the expert has experience with the appellant's specific profile, LGBTQ+ persecution, clan analysis, political opposition, FGM, trafficking, or linguistic identity. Profile expertise affects report quality and tribunal acceptance.",
         ],
       },
       {
@@ -173,13 +173,13 @@ export const guides: Guide[] = [
       {
         heading: "Joint Expert Meetings",
         content: [
-          "Where multiple experts are instructed, Practice Direction 2024 requires joint meetings before the hearing. Experts must engage genuinely, identify areas of agreement and disagreement, and produce a joint statement reflecting authentic positions — not collusion or negotiated advocacy.",
+          "Where multiple experts are instructed, Practice Direction 2024 requires joint meetings before the hearing. Experts must engage genuinely, identify areas of agreement and disagreement, and produce a joint statement reflecting authentic positions, not collusion or negotiated advocacy.",
         ],
       },
       {
         heading: "Independence Under Questioning",
         content: [
-          "Cross-examination tests independence. Experts must give honest answers even where they do not support the instructing party's case. Solicitors should not prepare experts to defend the client's position — preparation should focus on assisting the tribunal with clear, honest, evidence-based testimony.",
+          "Cross-examination tests independence. Experts must give honest answers even where they do not support the instructing party's case. Solicitors should not prepare experts to defend the client's position, preparation should focus on assisting the tribunal with clear, honest, evidence-based testimony.",
         ],
       },
     ],
@@ -213,7 +213,7 @@ export const guides: Guide[] = [
       {
         heading: "Exceptional Cases",
         content: [
-          "Where standard rates are insufficient — for example, complex multi-country analysis, urgent hearings, or extended oral evidence — apply for exceptional funding with detailed justification. The LAA considers the complexity of the case and the necessity of the expert evidence.",
+          "Where standard rates are insufficient, for example, complex multi-country analysis, urgent hearings, or extended oral evidence, apply for exceptional funding with detailed justification. The LAA considers the complexity of the case and the necessity of the expert evidence.",
         ],
       },
     ],

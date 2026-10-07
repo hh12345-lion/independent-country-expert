@@ -30,7 +30,7 @@ const steps = [
   {
     n: 4,
     title: "Submit Instruction Request",
-    body: "Use our contact form specifying country/jurisdiction, expertise needed, case type, and funding. We route to the appropriate network specialist within one business day.",
+    body: "Use our contact form specifying country/jurisdiction, expertise needed, case type, and funding. We route to the appropriate network specialist.",
   },
   {
     n: 5,
@@ -62,12 +62,12 @@ export default function HowToInstructPage() {
         <ol className="space-y-8">
           {steps.map((step) => (
             <li key={step.n} className="flex gap-4">
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#191B22] text-lg font-bold text-white">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#171D1E] text-lg font-bold text-white">
                 {step.n}
               </span>
               <div>
-                <h2 className="text-lg font-bold text-[#191B22]">{step.title}</h2>
-                <p className="mt-2 text-[#3A4148] leading-relaxed">{step.body}</p>
+                <h2 className="text-lg font-bold text-[#171D1E]">{step.title}</h2>
+                <p className="mt-2 text-[#364142] leading-relaxed">{step.body}</p>
               </div>
             </li>
           ))}
@@ -82,7 +82,7 @@ export default function HowToInstructPage() {
         />
         <Link
           href="/contact"
-          className="mt-8 inline-flex min-h-[44px] items-center rounded-[8px] bg-[#0B6E99] px-6 py-3 font-semibold text-white hover:bg-[#085578]"
+          className="mt-8 inline-flex min-h-[44px] items-center rounded-[8px] bg-[#406383] px-6 py-3 font-semibold text-white hover:bg-[#1A4346]"
         >
           Route a case
         </Link>

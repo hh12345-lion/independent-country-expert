@@ -22,16 +22,16 @@ function CategoryToggle({
   const inputId = `cookie-toggle-${category}`;
 
   return (
-    <li className="rounded-[8px] border border-[#C9C4BA] p-4">
+    <li className="rounded-[8px] border border-[#D0CFC9] p-4">
       <div className="flex items-start justify-between gap-4">
         <div className="min-w-0">
-          <label htmlFor={inputId} className="font-semibold text-[#191B22]">
+          <label htmlFor={inputId} className="font-semibold text-[#171D1E]">
             {meta.label}
             {meta.required && (
-              <span className="ml-2 text-xs font-normal text-[#3A4148]">(always on)</span>
+              <span className="ml-2 text-xs font-normal text-[#364142]">(always on)</span>
             )}
           </label>
-          <p className="mt-1 text-sm text-[#3A4148]">{meta.description}</p>
+          <p className="mt-1 text-sm text-[#364142]">{meta.description}</p>
         </div>
         <button
           id={inputId}
@@ -41,12 +41,12 @@ function CategoryToggle({
           aria-readonly={meta.required}
           disabled={meta.required}
           onClick={() => !meta.required && onChange(!checked)}
-          className={`relative inline-flex h-7 w-12 shrink-0 rounded-full transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0B6E99] motion-reduce:transition-none ${
+          className={`relative inline-flex h-7 w-12 shrink-0 rounded-full transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#406383] motion-reduce:transition-none ${
             meta.required
-              ? "cursor-not-allowed bg-[#191B22]/40"
+              ? "cursor-not-allowed bg-[#171D1E]/40"
               : checked
-                ? "bg-[#191B22]"
-                : "bg-[#C9C4BA]"
+                ? "bg-[#171D1E]"
+                : "bg-[#D0CFC9]"
           }`}
         >
           <span
@@ -116,11 +116,11 @@ export function CookiePreferencesModal() {
         role="dialog"
         aria-modal="true"
         aria-labelledby="cookie-prefs-title"
-        className="relative z-10 flex max-h-[90vh] w-full max-w-lg flex-col overflow-hidden rounded-t-2xl border border-[#C9C4BA] bg-white shadow-[0_16px_48px_rgba(0,0,0,0.2)] sm:rounded-2xl animate-[fadeIn_0.25s_ease-out] motion-reduce:animate-none"
+        className="relative z-10 flex max-h-[90vh] w-full max-w-lg flex-col overflow-hidden rounded-t-2xl border border-[#D0CFC9] bg-white shadow-[0_16px_48px_rgba(0,0,0,0.2)] sm:rounded-2xl animate-[fadeIn_0.25s_ease-out] motion-reduce:animate-none"
       >
-        <div className="relative border-b border-[#C9C4BA] bg-[#191B22] px-5 py-4 sm:px-6">
+        <div className="relative border-b border-[#D0CFC9] bg-[#171D1E] px-5 py-4 sm:px-6">
           <div
-            className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0B6E99] via-[#3D8FB5] to-[#0B6E99]"
+            className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#406383] via-[#48696B] to-[#406383]"
             aria-hidden
           />
           <h2 id="cookie-prefs-title" className="pt-1 text-lg font-bold text-white">
@@ -130,7 +130,7 @@ export function CookiePreferencesModal() {
             Manage how we use cookies. Changes apply immediately via Google Consent Mode.{" "}
             <Link
               href="/cookie-policy"
-              className="text-[#0B6E99] hover:underline"
+              className="text-[#406383] hover:underline"
               onClick={closePreferences}
             >
               Cookie Policy
@@ -149,40 +149,40 @@ export function CookiePreferencesModal() {
               />
             ))}
           </ul>
-          <p className="mt-4 text-xs leading-relaxed text-[#3A4148]">
+          <p className="mt-4 text-xs leading-relaxed text-[#364142]">
             California residents: we do not sell personal information. You may opt out of non-essential
-            cookies using the controls above — equivalent to &quot;Do Not Sell or Share&quot; for cookie-based
+            cookies using the controls above, equivalent to &quot;Do Not Sell or Share&quot; for cookie-based
             analytics and advertising where applicable.
           </p>
         </div>
 
-        <div className="flex flex-col gap-2 border-t border-[#C9C4BA] bg-[#E8EDF2] p-4 sm:flex-row sm:flex-wrap sm:justify-end">
+        <div className="flex flex-col gap-2 border-t border-[#D0CFC9] bg-[#E3E1DC] p-4 sm:flex-row sm:flex-wrap sm:justify-end">
           <button
             type="button"
             ref={closeBtnRef}
             onClick={closePreferences}
-            className="min-h-[44px] rounded-[8px] border border-[#C9C4BA] px-4 py-2 text-sm font-medium text-[#3A4148] hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#191B22]"
+            className="min-h-[44px] rounded-[8px] border border-[#D0CFC9] px-4 py-2 text-sm font-medium text-[#364142] hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#171D1E]"
           >
             Cancel
           </button>
           <button
             type="button"
             onClick={rejectNonEssential}
-            className="min-h-[44px] rounded-[8px] border border-[#191B22] px-4 py-2 text-sm font-semibold text-[#191B22] hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#191B22]"
+            className="min-h-[44px] rounded-[8px] border border-[#171D1E] px-4 py-2 text-sm font-semibold text-[#171D1E] hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#171D1E]"
           >
             Reject Non-Essential
           </button>
           <button
             type="button"
             onClick={() => savePreferences(draft)}
-            className="min-h-[44px] rounded-[8px] bg-[#191B22] px-4 py-2 text-sm font-semibold text-white hover:bg-[#101218] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0B6E99]"
+            className="min-h-[44px] rounded-[8px] bg-[#171D1E] px-4 py-2 text-sm font-semibold text-white hover:bg-[#0E1213] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#406383]"
           >
             Save preferences
           </button>
           <button
             type="button"
             onClick={acceptAll}
-            className="min-h-[44px] rounded-[8px] bg-[#0B6E99] px-4 py-2 text-sm font-semibold text-white hover:bg-[#085578] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3D8FB5]"
+            className="min-h-[44px] rounded-[8px] bg-[#406383] px-4 py-2 text-sm font-semibold text-white hover:bg-[#1A4346] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#48696B]"
           >
             Accept All
           </button>

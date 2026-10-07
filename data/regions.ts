@@ -22,7 +22,7 @@ export const regions: Region[] = [
       "Africa independent country expert witness routing for UK asylum tribunals. Horn of Africa, West Africa, East Africa, Southern Africa. FGM, LGBTQI+, political persecution, conflict.",
     h1: "Africa Independent Country Expert Witness UK",
     content: [
-      "Africa generates diverse asylum claims across Horn of Africa (Somalia, Eritrea, Ethiopia, Sudan), West Africa (Nigeria, Ghana, Sierra Leone), East Africa (Kenya, Uganda, DRC), and Southern Africa (Zimbabwe, South Africa). Each jurisdiction requires deep country-specific expertise — no single expert can cover the entire continent effectively.",
+      "Africa generates diverse asylum claims across Horn of Africa (Somalia, Eritrea, Ethiopia, Sudan), West Africa (Nigeria, Ghana, Sierra Leone), East Africa (Kenya, Uganda, DRC), and Southern Africa (Zimbabwe, South Africa). Each jurisdiction requires deep country-specific expertise, no single expert can cover the entire continent effectively.",
       "Common African asylum expert profiles include FGM and gender-based violence, LGBTQI+ persecution, political opinion, forced conscription (Eritrea), conflict-related Article 15(c) claims, and clan/ethnic minority persecution. Independent Country Expert routes instructions to Africa Expert Witness for multi-country African coverage, or to dedicated sites for Nigeria and Somalia.",
       "Tribunals increasingly scrutinise generic 'Africa' expert reports that lack jurisdiction-specific methodology. Network routing ensures solicitors instruct experts with genuine field expertise in the relevant country.",
     ],
@@ -33,7 +33,7 @@ export const regions: Region[] = [
       {
         question: "Can one expert cover all African countries?",
         answer:
-          "No — effective country expert evidence requires deep jurisdiction-specific knowledge. Independent Country Expert routes instructions to specialists — Africa Expert Witness for multi-country African coverage, or dedicated sites for Nigeria and Somalia.",
+          "No, effective country expert evidence requires deep jurisdiction-specific knowledge. Independent Country Expert routes instructions to specialists, Africa Expert Witness for multi-country African coverage, or dedicated sites for Nigeria and Somalia.",
       },
       {
         question: "What are the most common African asylum expert profiles?",

@@ -31,7 +31,7 @@ export default function RegionsPage() {
             href: `/regions/${r.slug}`,
           }))}
         />
-        <Link href="/countries" className="mt-8 inline-flex min-h-[44px] items-center font-semibold text-[#0B6E99] hover:underline">
+        <Link href="/countries" className="mt-8 inline-flex min-h-[44px] items-center font-semibold text-[#406383] hover:underline">
           Browse by country
         </Link>
       </PageShell>

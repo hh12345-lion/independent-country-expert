@@ -1,4 +1,4 @@
-/** Typesetter mark — double rule + diamond; not a globe / meridian */
+/** Typesetter mark, double rule + diamond; not a globe / meridian */
 export function FolioMark({ className = "h-8 w-8" }: { className?: string }) {
   return (
     <svg

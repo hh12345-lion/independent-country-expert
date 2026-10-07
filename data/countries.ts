@@ -23,7 +23,7 @@ export const countries: Country[] = [
       "Somalia independent country expert witness for UK asylum tribunals. MOJ framework, clan analysis, Al-Shabaab risk, FGM, and Mogadishu return. Routed to Somalia Expert for deep content.",
     h1: "Somalia Independent Country Expert Witness UK",
     content: [
-      "Somalia is among the most complex asylum jurisdictions in UK immigration tribunals. Multiple layers of country guidance — MOJ, OA, AMM — apply radically different legal treatment across Mogadishu, Somaliland, Puntland, and South/Central regions. The security situation evolves rapidly, requiring independent experts with dated primary sources and profile-specific analysis.",
+      "Somalia is among the most complex asylum jurisdictions in UK immigration tribunals. Multiple layers of country guidance, MOJ, OA, AMM, apply radically different legal treatment across Mogadishu, Somaliland, Puntland, and South/Central regions. The security situation evolves rapidly, requiring independent experts with dated primary sources and profile-specific analysis.",
       "Key Somalia asylum profiles include clan-based persecution, Al-Shabaab targeting, FGM and gender-based violence, minority religious persecution, and Mogadishu return under the MOJ framework. Independence matters acutely in Somalia cases: tribunals scrutinise whether experts have relied uncritically on MOJ country guidance or provided genuine independent analysis of the appellant's specific circumstances.",
       "Independent Country Expert coordinates Somalia instructions to specialist experts via Somalia Expert, which provides comprehensive MOJ framework analysis, regional pages, asylum profiles, and CPIN guidance for UK solicitors.",
     ],
@@ -53,7 +53,7 @@ export const countries: Country[] = [
     h1: "Nigeria Independent Country Expert Witness UK",
     content: [
       "Nigeria generates one of the highest volumes of asylum claims in the UK. Key profiles include LGBTQ+ persecution under SSMPA, Boko Haram and ISWAP targeting, IPOB political persecution, witchcraft accusations, FGM, and Christian-Muslim communal violence. Home Office refusals frequently rely on generic CPIN positions that do not reflect profile-specific risk.",
-      "Independent Nigeria country experts assess conditions with dated Nigerian primary sources — EUAA Country Guidance Nigeria 2026, updated SOGIESC and separatist CPINs, and field research. Experts must maintain the paramount duty to the tribunal under Ikarian Reefer, providing analysis beyond CPIN summaries.",
+      "Independent Nigeria country experts assess conditions with dated Nigerian primary sources, EUAA Country Guidance Nigeria 2026, updated SOGIESC and separatist CPINs, and field research. Experts must maintain the paramount duty to the tribunal under Ikarian Reefer, providing analysis beyond CPIN summaries.",
       "For comprehensive Nigeria asylum profiles, CPIN analysis, and regional expert evidence guidance, solicitors should consult Nigeria Expert via the network routing below.",
     ],
     keyProfiles: ["LGBTQ+ / SSMPA", "Boko Haram / ISWAP", "IPOB / Biafra", "Witchcraft accusations", "FGM"],
@@ -82,7 +82,7 @@ export const countries: Country[] = [
     h1: "Pakistan Independent Country Expert Witness UK",
     content: [
       "Pakistan asylum claims are legally dense, frequently engaging blasphemy law (s.295-C PPC), Ahmadi persecution, honour-based violence, and political persecution (PTI, TLP). MN and Others [2012] country guidance and updated CPINs require careful expert analysis of profile-specific risk beyond generic Home Office positions.",
-      "Independent Pakistan experts address regional variation — conditions in Karachi differ from rural Punjab; Ahmadi communities face distinct persecution patterns; blasphemy allegations carry lethal risk regardless of urban/rural location. Reports must cite dated primary sources and maintain independence under CPR Part 35.",
+      "Independent Pakistan experts address regional variation, conditions in Karachi differ from rural Punjab; Ahmadi communities face distinct persecution patterns; blasphemy allegations carry lethal risk regardless of urban/rural location. Reports must cite dated primary sources and maintain independence under CPR Part 35.",
       "Pakistan Country Expert provides comprehensive Pakistan asylum profiles, CPIN guidance, and Ahmadi/blasphemy expert evidence resources for UK solicitors.",
     ],
     keyProfiles: ["Ahmadi persecution", "Blasphemy (s.295-C)", "Honour-based violence", "LGBTQ+", "Political (PTI/TLP)"],
@@ -140,7 +140,7 @@ export const countries: Country[] = [
     h1: "Albania Independent Country Expert Witness UK",
     content: [
       "Albania asylum claims in UK tribunals frequently engage blood feud (gjakmarrja) risk, human trafficking return, LGBTQ+ persecution, Roma and Egyptian minority discrimination, and organised crime targeting. Country guidance and CPIN positions require careful independent analysis of the appellant's specific profile and region.",
-      "Blood feud claims require expert analysis of kanun traditions, family honour codes, state protection availability, and internal relocation viability — particularly to Tirana and other urban centres. Experts must distinguish between historical feud patterns and current risk to the individual appellant.",
+      "Blood feud claims require expert analysis of kanun traditions, family honour codes, state protection availability, and internal relocation viability, particularly to Tirana and other urban centres. Experts must distinguish between historical feud patterns and current risk to the individual appellant.",
       "Albania Expert Witness provides specialist Albania asylum profiles and expert evidence guidance for UK solicitors.",
     ],
     keyProfiles: ["Blood feud (gjakmarrja)", "Trafficking return", "LGBTQ+", "Roma/Egyptian minorities"],
@@ -169,12 +169,12 @@ export const countries: Country[] = [
     h1: "Eritrea Independent Country Expert Witness UK",
     content: [
       "Eritrea generates significant asylum claims linked to indefinite national service, political persecution, religious minority targeting (Pentecostal Christians, Jehovah's Witnesses), and draft evasion. UK country guidance on Eritrea requires careful independent analysis as conditions evolve.",
-      "Expert witnesses assess whether the appellant's specific profile — length of service, political associations, religious practice — creates a real risk on return. State protection analysis is central: Eritrea's governance structure limits independent judicial oversight and effective protection for perceived dissidents.",
+      "Expert witnesses assess whether the appellant's specific profile, length of service, political associations, religious practice, creates a real risk on return. State protection analysis is central: Eritrea's governance structure limits independent judicial oversight and effective protection for perceived dissidents.",
       "Africa Expert Witness provides Horn of Africa specialist coverage including Eritrea country condition reports for UK immigration tribunals.",
     ],
     keyProfiles: ["Indefinite national service", "Draft evasion", "Political persecution", "Religious minorities"],
     outboundUrl: "https://www.africaexpertwitness.com/countries/eritrea",
-    outboundLabel: "Africa Expert Witness — Eritrea",
+    outboundLabel: "Africa Expert Witness: Eritrea",
     networkSite: "africaexpertwitness.com",
     faqs: [
       {
@@ -203,7 +203,7 @@ export const countries: Country[] = [
     ],
     keyProfiles: ["Tigray conflict", "Oromo persecution", "Political opposition", "LGBTQ+", "Ethnic minorities"],
     outboundUrl: "https://www.africaexpertwitness.com/countries/ethiopia",
-    outboundLabel: "Africa Expert Witness — Ethiopia",
+    outboundLabel: "Africa Expert Witness: Ethiopia",
     networkSite: "africaexpertwitness.com",
     faqs: [
       {
@@ -232,7 +232,7 @@ export const countries: Country[] = [
     ],
     keyProfiles: ["Darfur", "Post-2023 conflict", "Political persecution", "Ethnic minorities", "Women's rights"],
     outboundUrl: "https://www.africaexpertwitness.com/countries/sudan",
-    outboundLabel: "Africa Expert Witness — Sudan",
+    outboundLabel: "Africa Expert Witness: Sudan",
     networkSite: "africaexpertwitness.com",
     faqs: [
       {
@@ -261,7 +261,7 @@ export const countries: Country[] = [
     ],
     keyProfiles: ["Political / MDC opposition", "LGBTQI+", "Human rights defenders", "Diaspora activism risk"],
     outboundUrl: "https://www.africaexpertwitness.com/countries/zimbabwe",
-    outboundLabel: "Africa Expert Witness — Zimbabwe",
+    outboundLabel: "Africa Expert Witness: Zimbabwe",
     networkSite: "africaexpertwitness.com",
     faqs: [
       {
@@ -285,12 +285,12 @@ export const countries: Country[] = [
     h1: "India Independent Country Expert Witness UK",
     content: [
       "India generates growing asylum claim volumes engaging Hindutva and RSS targeting of Muslims, Sikh claims linked to Khalistan associations, Christian minority targeting, caste discrimination against Dalits, and political dissident persecution. India's size makes internal relocation arguments heavily contested.",
-      "Independent experts assess whether state protection is available and whether internal relocation is viable given the nationwide reach of Hindutva networks and the specific profile of the appellant. Regional variation — BJP-governed states versus opposition states — is critical to profile-specific analysis.",
+      "Independent experts assess whether state protection is available and whether internal relocation is viable given the nationwide reach of Hindutva networks and the specific profile of the appellant. Regional variation, BJP-governed states versus opposition states, is critical to profile-specific analysis.",
       "South Asia Expert provides India specialist country condition reports and asylum profile guidance for UK solicitors.",
     ],
     keyProfiles: ["Muslim / Hindutva targeting", "Sikh / Khalistan", "Caste discrimination", "Christian minorities"],
     outboundUrl: "https://www.southasiaexpert.com/countries/india",
-    outboundLabel: "South Asia Expert — India",
+    outboundLabel: "South Asia Expert: India",
     networkSite: "southasiaexpert.com",
     faqs: [
       {
@@ -319,7 +319,7 @@ export const countries: Country[] = [
     ],
     keyProfiles: ["BNP/AL political persecution", "Hindu minorities", "LGBTQ+", "Gender-based violence"],
     outboundUrl: "https://www.southasiaexpert.com/countries/bangladesh",
-    outboundLabel: "South Asia Expert — Bangladesh",
+    outboundLabel: "South Asia Expert: Bangladesh",
     networkSite: "southasiaexpert.com",
     faqs: [
       {
@@ -348,7 +348,7 @@ export const countries: Country[] = [
     ],
     keyProfiles: ["Sectarian persecution", "Former Ba'athists", "LGBTQ+", "Yazidi/Christian minorities", "Western association"],
     outboundUrl: "https://www.africaexpertwitness.com/countries/iraq",
-    outboundLabel: "Africa Expert Witness — Iraq",
+    outboundLabel: "Africa Expert Witness: Iraq",
     networkSite: "africaexpertwitness.com",
     faqs: [
       {

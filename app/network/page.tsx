@@ -27,7 +27,7 @@ const networkFaqs = [
   {
     question: "Does Independent Country Expert duplicate country-deep content?",
     answer:
-      "No — ICE provides routing and independence framework depth only. MOJ analysis, country-specific CPIN depth, and asylum profile pages are maintained on dedicated network sites linked from this directory.",
+      "No, ICE provides routing and independence framework depth only. MOJ analysis, country-specific CPIN depth, and asylum profile pages are maintained on dedicated network sites linked from this directory.",
   },
 ];
 
@@ -42,34 +42,34 @@ export default function NetworkPage() {
         breadcrumbs={crumbs}
       >
         <HubPageLinks showNetwork={false} />
-        <p className="mb-8 text-[#3A4148] leading-relaxed">
+        <p className="mb-8 text-[#364142] leading-relaxed">
           Independent Country Expert coordinates instruction across twelve specialist network sites. Each site
           provides deep jurisdiction-specific content, asylum profiles, and CPIN analysis. This hub routes
           solicitors to the right specialist while maintaining independence standards across the network.
         </p>
 
-        <h2 className="text-xl font-bold text-[#191B22]">Network Directory</h2>
+        <h2 className="text-xl font-bold text-[#171D1E]">Network Directory</h2>
         <div className="mt-6">
           <ResponsiveTableWrap label="Swipe to view full network directory">
             <table className="w-full min-w-[560px] border-collapse text-sm">
               <thead>
-                <tr className="border-b border-[#C9C4BA] bg-[#E8EDF2]">
-                  <th className="px-3 py-3 text-left font-semibold text-[#191B22] sm:px-4">Site</th>
-                  <th className="px-3 py-3 text-left font-semibold text-[#191B22] sm:px-4">Role</th>
-                  <th className="px-3 py-3 text-left font-semibold text-[#191B22] sm:px-4">URL</th>
+                <tr className="border-b border-[#D0CFC9] bg-[#E3E1DC]">
+                  <th className="px-3 py-3 text-left font-semibold text-[#171D1E] sm:px-4">Site</th>
+                  <th className="px-3 py-3 text-left font-semibold text-[#171D1E] sm:px-4">Role</th>
+                  <th className="px-3 py-3 text-left font-semibold text-[#171D1E] sm:px-4">URL</th>
                 </tr>
               </thead>
               <tbody>
                 {networkSites.map((site) => (
-                  <tr key={site.url} className="border-b border-[#C9C4BA]">
-                    <td className="px-3 py-3 font-medium text-[#191B22] sm:px-4">{site.name}</td>
-                    <td className="px-3 py-3 text-[#3A4148] sm:px-4">{site.expertise}</td>
+                  <tr key={site.url} className="border-b border-[#D0CFC9]">
+                    <td className="px-3 py-3 font-medium text-[#171D1E] sm:px-4">{site.name}</td>
+                    <td className="px-3 py-3 text-[#364142] sm:px-4">{site.expertise}</td>
                     <td className="px-3 py-3 sm:px-4">
                       <a
                         href={site.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="break-all font-medium text-[#0B6E99] hover:underline"
+                        className="break-all font-medium text-[#406383] hover:underline"
                       >
                         {site.url.replace("https://www.", "")}
                       </a>
@@ -85,16 +85,16 @@ export default function NetworkPage() {
           {networkSites.map((site) => (
             <article
               key={site.url}
-              className="rounded-[8px] border border-[#C9C4BA] bg-white p-5 shadow-[0_1px_3px_rgba(0,0,0,0.08)] sm:p-6"
+              className="rounded-[8px] border border-[#D0CFC9] bg-white p-5 shadow-[0_1px_3px_rgba(0,0,0,0.08)] sm:p-6"
             >
-              <h2 className="text-lg font-bold text-[#191B22]">{site.name}</h2>
-              <p className="mt-2 text-sm text-[#3A4148] leading-relaxed">{site.description}</p>
-              <p className="mt-3 text-xs font-medium text-[#0B6E99]">{site.expertise}</p>
+              <h2 className="text-lg font-bold text-[#171D1E]">{site.name}</h2>
+              <p className="mt-2 text-sm text-[#364142] leading-relaxed">{site.description}</p>
+              <p className="mt-3 text-xs font-medium text-[#406383]">{site.expertise}</p>
               <a
                 href={site.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-flex min-h-[44px] items-center text-sm font-semibold text-[#0B6E99] hover:underline"
+                className="mt-4 inline-flex min-h-[44px] items-center text-sm font-semibold text-[#406383] hover:underline"
               >
                 Visit {site.name} →
               </a>

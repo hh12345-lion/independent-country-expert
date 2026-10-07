@@ -29,7 +29,7 @@ export const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Country Condition Report",
     definition:
-      "Expert witness report providing independent analysis of conditions in the appellant's country of origin — security, governance, human rights, and profile-specific risk — with dated primary sources.",
+      "Expert witness report providing independent analysis of conditions in the appellant's country of origin, security, governance, human rights, and profile-specific risk, with dated primary sources.",
   },
   {
     term: "Country Guidance (CG)",
@@ -96,7 +96,7 @@ export const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Joint Expert Meeting",
     definition:
-      "Meeting between experts instructed by different parties before a tribunal hearing, required under Practice Direction 2024. Must be genuine — identifying agreement and disagreement without collusion.",
+      "Meeting between experts instructed by different parties before a tribunal hearing, required under Practice Direction 2024. Must be genuine, identifying agreement and disagreement without collusion.",
   },
   {
     term: "Legal Aid (Expert Witness)",
@@ -117,12 +117,12 @@ export const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Primary Sources (Country Expert)",
     definition:
-      "Original, dated source material cited in expert reports — ACLED data, UNHCR position papers, FCO travel advice, NGO field reports, academic research, and government documents.",
+      "Original, dated source material cited in expert reports, ACLED data, UNHCR position papers, FCO travel advice, NGO field reports, academic research, and government documents.",
   },
   {
     term: "Profile-Specific Risk",
     definition:
-      "Risk assessment applied to the individual appellant's specific circumstances — ethnicity, clan, political associations, sexuality, gender, region — rather than generic country conditions.",
+      "Risk assessment applied to the individual appellant's specific circumstances, ethnicity, clan, political associations, sexuality, gender, region, rather than generic country conditions.",
   },
   {
     term: "Return Risk Assessment",
@@ -157,6 +157,6 @@ export const glossaryTerms: GlossaryTerm[] = [
   {
     term: "Well-Founded Fear",
     definition:
-      "The standard for refugee status under Article 1A(2) of the Refugee Convention — a well-founded fear of persecution for reasons of race, religion, nationality, membership of a particular social group, or political opinion.",
+      "The standard for refugee status under Article 1A(2) of the Refugee Convention, a well-founded fear of persecution for reasons of race, religion, nationality, membership of a particular social group, or political opinion.",
   },
 ];

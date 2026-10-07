@@ -47,9 +47,9 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       <PageShell title={guide.h1} breadcrumbs={crumbs}>
         {guide.sections.map((s) => (
           <section key={s.heading} className="mb-10">
-            <h2 className="text-xl font-bold text-[#191B22]">{s.heading}</h2>
+            <h2 className="text-xl font-bold text-[#171D1E]">{s.heading}</h2>
             {s.content.map((p, i) => (
-              <p key={i} className="mt-4 text-[#3A4148] leading-relaxed">
+              <p key={i} className="mt-4 text-[#364142] leading-relaxed">
                 {p}
               </p>
             ))}
@@ -58,7 +58,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         <RelatedLinks links={getGuideRelatedLinks(slug)} />
         <Link
           href="/contact"
-          className="mt-8 inline-flex min-h-[44px] items-center rounded-[8px] bg-[#0B6E99] px-6 py-3 font-semibold text-white hover:bg-[#085578]"
+          className="mt-8 inline-flex min-h-[44px] items-center rounded-[8px] bg-[#406383] px-6 py-3 font-semibold text-white hover:bg-[#1A4346]"
         >
           Route a case
         </Link>
